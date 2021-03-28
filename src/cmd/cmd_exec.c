@@ -1,37 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   cmd_exec.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/27 16:26:19 by abrabant          #+#    #+#             */
-/*   Updated: 2021/03/28 16:39:37 by abrabant         ###   ########.fr       */
+/*   Created: 2021/03/28 16:04:28 by abrabant          #+#    #+#             */
+/*   Updated: 2021/03/28 16:26:10 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <stdint.h>
+
 #include "pshswp_stack.h"
 #include "cmd.h"
-#include "libft/string.h"
 
-/*
-** To perform some tests while developping
-*/
+#include "libft/cstring.h"
 
-int	main(void)
+void	cmd_exec(t_cmd *cmdlist, const char *cmd, t_pshswp_stack *a,
+		t_pshswp_stack *b)
 {
-	t_pshswp_stack	*stack;
-	t_cmd	*cmdlist;
+	uint8_t	low;
+	uint8_t	mid;
+	uint8_t	high;
+	int		cmp_ret;
 
-	stack = stack_new();
-	for (long long i = 0; i < 25; ++i) {
-		stack_push(stack, i);
-	}
-	cmdlist = cmd_getlist();
-	cmd_exec(cmdlist, "sa", stack, NULL);
-	while (!stack_isempty(stack)) {
-		printf("%lld\n", stack_pop(stack));
+	low = 0;
+	high = CMD_NB - 1;
+	while (low < high)
+	{
+		mid = (low + high) / 2;
+		cmp_ret = ft_strcmp(cmd, cmdlist[mid].name);
+		if (cmp_ret == 0)
+			cmdlist[mid].trigger(a, b);
+		if (cmp_ret > 0)
+			low = mid + 1;
+		else
+			high = mid - 1;
 	}
 }
-//e

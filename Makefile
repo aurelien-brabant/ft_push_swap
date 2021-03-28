@@ -6,7 +6,7 @@
 #    By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/27 15:53:06 by abrabant          #+#    #+#              #
-#    Updated: 2021/03/28 15:08:12 by abrabant         ###   ########.fr        #
+#    Updated: 2021/03/28 16:41:44 by abrabant         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,8 @@ PSHSWP_STACK		= $(addprefix src/stack/, stack_new.c stack_push.c	\
 						stack_pop.c stack_isempty.c stack_peek.c		\
 						stack_rotate_up.c stack_rotate_down.c)
 
-CMD					= $(addprefix src/cmd/, cmd_getlist.c cmd.c cmd2.c)
+CMD					= $(addprefix src/cmd/, cmd_getlist.c cmd.c cmd2.c	\
+					  cmd_exec.c)
 
 SRCS				= $(PSHSWP_STACK) $(CMD)
 
@@ -40,18 +41,18 @@ OBJS				= $(SRCS:%.c=%.o)
 all: $(TEST_TARGET)
 
 $(TEST_TARGET): libft/libft.a $(HEADERS) $(OBJS) src/main.o
-	$(LD) -o $(TEST_TARGET) $(OBJS) src/main.o $(LD_FLAGS)
+	@$(LD) -o $(TEST_TARGET) $(OBJS) src/main.o $(LD_FLAGS)
+	@echo -e "[\033[1;36mPUSH-SWAP\033[0;m] Generated \033[1;32m$(TEST_TARGET)\033[0m"
 
 norm:
 	@norminette src
 	@norminette include
 
 clean:
-	$(RM) $(OBJS) src/main.o
+	@$(RM) $(OBJS) src/main.o
 
 fclean: clean
-	make fclean -C libft
-	$(RM) $(TEST_TARGET) $(PSHSWP_TARGET) $(CHECKER_TARGET)
+	@$(RM) $(TEST_TARGET) $(PSHSWP_TARGET) $(CHECKER_TARGET)
 
 re: fclean all
 
@@ -63,4 +64,5 @@ libft/libft.a:
 .PHONY: clean fclean re
 
 %.o:%.c $(HEADERS)
-	$(CC) $(CFLAGS) -o $@ -c $<
+	@$(CC) $(CFLAGS) -o $@ -c $<
+	@echo -e "[\033[1;36mPUSH-SWAP\033[0;m] \033[1;37mCC \033[0;32m$<\033[0m\r"
