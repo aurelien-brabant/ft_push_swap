@@ -6,7 +6,7 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/27 16:02:36 by abrabant          #+#    #+#             */
-/*   Updated: 2021/03/28 03:13:24 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/03/28 23:28:05 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,5 +71,7 @@ bool			stack_isempty(t_pshswp_stack *stack);
 void			stack_rotate_up(t_pshswp_stack *stack);
 
 void			stack_rotate_down(t_pshswp_stack *stack);
+
+void			stack_destroy(t_pshswp_stack *stack);
 
 #endif

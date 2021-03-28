@@ -6,7 +6,7 @@
 #    By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/27 15:53:06 by abrabant          #+#    #+#              #
-#    Updated: 2021/03/28 18:05:25 by abrabant         ###   ########.fr        #
+#    Updated: 2021/03/28 23:40:21 by abrabant         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,8 @@ HEADERS				= $(addprefix include/, pshswp_stack.h)
 
 PSHSWP_STACK		= $(addprefix src/stack/, stack_new.c stack_push.c	\
 						stack_pop.c stack_isempty.c stack_peek.c		\
-						stack_rotate_up.c stack_rotate_down.c)
+						stack_rotate_up.c stack_rotate_down.c			\
+						stack_destroy.c)
 
 CMD					= $(addprefix src/cmd/, cmd_getlist.c cmd.c cmd2.c	\
 					  cmd_exec.c)
@@ -38,7 +39,11 @@ OBJS				= $(SRCS:%.c=%.o)
 
 # RULES
 
-all: $(TEST_TARGET)
+all: $(PUSH_SWAP_TARGET)
+
+$(PUSH_SWAP_TARGET): libft/libft.a $(HEADERS) $(OBJS) src/push_swap/main.o
+	@$(LD) -o $(PUSH_SWAP_TARGET) $(OBJS) src/push_swap/main.o $(LD_FLAGS)
+	@printf "[\033[1;36mPUSH-SWAP\033[0;m] Generated \033[1;32m$(PUSH_SWAP_TARGET)\033[0m\n"
 
 $(TEST_TARGET): libft/libft.a $(HEADERS) $(OBJS) src/main.o
 	@$(LD) -o $(TEST_TARGET) $(OBJS) src/main.o $(LD_FLAGS)
