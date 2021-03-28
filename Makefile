@@ -6,7 +6,7 @@
 #    By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/27 15:53:06 by abrabant          #+#    #+#              #
-#    Updated: 2021/03/28 15:03:04 by abrabant         ###   ########.fr        #
+#    Updated: 2021/03/28 15:08:12 by abrabant         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,10 @@ all: $(TEST_TARGET)
 
 $(TEST_TARGET): libft/libft.a $(HEADERS) $(OBJS) src/main.o
 	$(LD) -o $(TEST_TARGET) $(OBJS) src/main.o $(LD_FLAGS)
+
+norm:
+	@norminette src
+	@norminette include
 
 clean:
 	$(RM) $(OBJS) src/main.o

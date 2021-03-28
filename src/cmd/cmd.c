@@ -6,7 +6,7 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/28 12:59:44 by abrabant          #+#    #+#             */
-/*   Updated: 2021/03/28 15:02:46 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/03/28 15:08:56 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,3 @@ void	cmd_swap_double(t_pshswp_stack *a, t_pshswp_stack *b)
 	cmd_swap_a(a);
 	cmd_swap_b(b);
 }
-
