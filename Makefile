@@ -6,7 +6,7 @@
 #    By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/27 15:53:06 by abrabant          #+#    #+#              #
-#    Updated: 2021/03/28 16:41:44 by abrabant         ###   ########.fr        #
+#    Updated: 2021/03/28 18:05:25 by abrabant         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,7 @@ all: $(TEST_TARGET)
 
 $(TEST_TARGET): libft/libft.a $(HEADERS) $(OBJS) src/main.o
 	@$(LD) -o $(TEST_TARGET) $(OBJS) src/main.o $(LD_FLAGS)
-	@echo -e "[\033[1;36mPUSH-SWAP\033[0;m] Generated \033[1;32m$(TEST_TARGET)\033[0m"
+	@printf "[\033[1;36mPUSH-SWAP\033[0;m] Generated \033[1;32m$(TEST_TARGET)\033[0m\n"
 
 norm:
 	@norminette src
@@ -65,4 +65,4 @@ libft/libft.a:
 
 %.o:%.c $(HEADERS)
 	@$(CC) $(CFLAGS) -o $@ -c $<
-	@echo -e "[\033[1;36mPUSH-SWAP\033[0;m] \033[1;37mCC \033[0;32m$<\033[0m\r"
+	@printf "[\033[1;36mPUSH-SWAP\033[0;m] \033[1;37mCC \033[0;32m$<\033[0m\n"
