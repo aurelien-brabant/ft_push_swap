@@ -6,7 +6,7 @@
 #    By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/27 15:53:06 by abrabant          #+#    #+#              #
-#    Updated: 2021/03/28 12:56:45 by abrabant         ###   ########.fr        #
+#    Updated: 2021/03/28 15:03:04 by abrabant         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ PSHSWP_STACK		= $(addprefix src/stack/, stack_new.c stack_push.c	\
 						stack_pop.c stack_isempty.c stack_peek.c		\
 						stack_rotate_up.c stack_rotate_down.c)
 
-CMD					= $(addprefix src/cmd/, cmd_getlist.c)
+CMD					= $(addprefix src/cmd/, cmd_getlist.c cmd.c cmd2.c)
 
 SRCS				= $(PSHSWP_STACK) $(CMD)
 
