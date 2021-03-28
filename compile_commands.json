@@ -1,0 +1,2500 @@
+[
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-Wpedantic",
+            "-Iinclude",
+            "-Ilibft/include",
+            "-o",
+            "src/main.o",
+            "src/main.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/push_swap",
+        "file": "src/main.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_stack_destroy.o",
+            "src/stack/ft_stack_destroy.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/stack/ft_stack_destroy.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_memmove.o",
+            "src/cstring/ft_memmove.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cstring/ft_memmove.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_strnstr.o",
+            "src/cstring/ft_strnstr.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cstring/ft_strnstr.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_cla_bool_var.o",
+            "src/cla/ft_cla_bool_var.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cla/ft_cla_bool_var.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_array_sinsert.o",
+            "src/array/ft_array_sinsert.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/array/ft_array_sinsert.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/conv_pct.o",
+            "src/io/printf/conv_pct.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/io/printf/conv_pct.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_stack_isempty.o",
+            "src/stack/ft_stack_isempty.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/stack/ft_stack_isempty.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_stack_push.o",
+            "src/stack/ft_stack_push.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/stack/ft_stack_push.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_array_foreach.o",
+            "src/array/ft_array_foreach.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/array/ft_array_foreach.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_string_findsubset.o",
+            "src/string/ft_string_findsubset.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/string/ft_string_findsubset.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_strhsprfx.o",
+            "src/cstring/ft_strhsprfx.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cstring/ft_strhsprfx.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_vec_foreach.o",
+            "src/vector/ft_vec_foreach.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/vector/ft_vec_foreach.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_sprintf.o",
+            "src/io/printf/ft_sprintf.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/io/printf/ft_sprintf.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_array_merge.o",
+            "src/array/ft_array_merge.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/array/ft_array_merge.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_strtrim.o",
+            "src/cstring/ft_strtrim.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cstring/ft_strtrim.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_ulllenb.o",
+            "src/intconv/ft_ulllenb.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/intconv/ft_ulllenb.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_vsnprintf.o",
+            "src/io/printf/ft_vsnprintf.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/io/printf/ft_vsnprintf.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_string_new.o",
+            "src/string/ft_string_new.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/string/ft_string_new.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_lltob.o",
+            "src/intconv/ft_lltob.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/intconv/ft_lltob.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/lenspec.o",
+            "src/io/printf/lenspec.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/io/printf/lenspec.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_string_new_fill.o",
+            "src/string/ft_string_new_fill.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/string/ft_string_new_fill.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_strlwr.o",
+            "src/cstring/ft_strlwr.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cstring/ft_strlwr.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_string_size.o",
+            "src/string/ft_string_size.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/string/ft_string_size.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_array_rotate.o",
+            "src/array/ft_array_rotate.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/array/ft_array_rotate.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_printf.o",
+            "src/io/printf/ft_printf.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/io/printf/ft_printf.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_atoi.o",
+            "src/strconv/ft_atoi.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/strconv/ft_atoi.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_vec_cat.o",
+            "src/vector/ft_vec_cat.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/vector/ft_vec_cat.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_dprintf.o",
+            "src/io/printf/ft_dprintf.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/io/printf/ft_dprintf.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_string_replacechar.o",
+            "src/string/ft_string_replacechar.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/string/ft_string_replacechar.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_memcmp.o",
+            "src/cstring/ft_memcmp.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cstring/ft_memcmp.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_array_size.o",
+            "src/array/ft_array_size.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/array/ft_array_size.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_array_reverse.o",
+            "src/array/ft_array_reverse.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/array/ft_array_reverse.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_string_split.o",
+            "src/string/ft_string_split.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/string/ft_string_split.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_strupr.o",
+            "src/cstring/ft_strupr.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cstring/ft_strupr.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_calloc.o",
+            "src/core/ft_calloc.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/core/ft_calloc.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_realloc.o",
+            "src/core/ft_realloc.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/core/ft_realloc.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_encode_utf8.o",
+            "src/unicode/ft_encode_utf8.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/unicode/ft_encode_utf8.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_isascii.o",
+            "src/ctype/ft_isascii.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/ctype/ft_isascii.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/buf.o",
+            "src/io/printf/buf.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/io/printf/buf.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_strlcpy.o",
+            "src/cstring/ft_strlcpy.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cstring/ft_strlcpy.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_vec_set.o",
+            "src/vector/ft_vec_set.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/vector/ft_vec_set.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_string_findcsubset.o",
+            "src/string/ft_string_findcsubset.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/string/ft_string_findcsubset.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_strchr.o",
+            "src/cstring/ft_strchr.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cstring/ft_strchr.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_putchar_fd.o",
+            "src/io/ft_putchar_fd.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/io/ft_putchar_fd.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_isprint.o",
+            "src/ctype/ft_isprint.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/ctype/ft_isprint.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_array_union.o",
+            "src/array/ft_array_union.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/array/ft_array_union.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_array_int_resize.o",
+            "src/array/ft_array_int_resize.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/array/ft_array_int_resize.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_array_binsearch.o",
+            "src/array/ft_array_binsearch.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/array/ft_array_binsearch.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_array_inter.o",
+            "src/array/ft_array_inter.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/array/ft_array_inter.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_string_cmp.o",
+            "src/string/ft_string_cmp.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/string/ft_string_cmp.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_strmapi.o",
+            "src/cstring/ft_strmapi.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cstring/ft_strmapi.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_cla_str_var.o",
+            "src/cla/ft_cla_str_var.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cla/ft_cla_str_var.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_memccpy.o",
+            "src/cstring/ft_memccpy.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cstring/ft_memccpy.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/init_conv.o",
+            "src/io/printf/init_conv.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/io/printf/init_conv.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_array_set.o",
+            "src/array/ft_array_set.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/array/ft_array_set.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_array_linsearch.o",
+            "src/array/ft_array_linsearch.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/array/ft_array_linsearch.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_array_uniq.o",
+            "src/array/ft_array_uniq.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/array/ft_array_uniq.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_string_subset.o",
+            "src/array/ft_string_subset.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/array/ft_string_subset.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_snprintf.o",
+            "src/io/printf/ft_snprintf.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/io/printf/ft_snprintf.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_clamp.o",
+            "src/core/ft_clamp.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/core/ft_clamp.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_runelen.o",
+            "src/unicode/ft_runelen.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/unicode/ft_runelen.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_buf_utf8.o",
+            "src/unicode/ft_buf_utf8.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/unicode/ft_buf_utf8.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_string_btoll.o",
+            "src/string/ft_string_btoll.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/string/ft_string_btoll.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_array_append.o",
+            "src/array/ft_array_append.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/array/ft_array_append.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_vec_add.o",
+            "src/vector/ft_vec_add.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/vector/ft_vec_add.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_stack_pop.o",
+            "src/stack/ft_stack_pop.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/stack/ft_stack_pop.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_strrev.o",
+            "src/cstring/ft_strrev.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cstring/ft_strrev.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_array_shift.o",
+            "src/array/ft_array_shift.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/array/ft_array_shift.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_cla_init.o",
+            "src/cla/ft_cla_init.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cla/ft_cla_init.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_array_get.o",
+            "src/array/ft_array_get.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/array/ft_array_get.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_vec_map.o",
+            "src/vector/ft_vec_map.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/vector/ft_vec_map.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_putnbr_fd.o",
+            "src/io/ft_putnbr_fd.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/io/ft_putnbr_fd.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_split.o",
+            "src/cstring/ft_split.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cstring/ft_split.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_string_append.o",
+            "src/string/ft_string_append.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/string/ft_string_append.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_cla_get_config.o",
+            "src/cla/ft_cla_get_config.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cla/ft_cla_get_config.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_vec_destroy.o",
+            "src/vector/ft_vec_destroy.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/vector/ft_vec_destroy.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_strtok.o",
+            "src/cstring/ft_strtok.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cstring/ft_strtok.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_vsprintf.o",
+            "src/io/printf/ft_vsprintf.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/io/printf/ft_vsprintf.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_vec_sort.o",
+            "src/vector/ft_vec_sort.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/vector/ft_vec_sort.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_strdup.o",
+            "src/cstring/ft_strdup.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cstring/ft_strdup.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_memchr.o",
+            "src/cstring/ft_memchr.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cstring/ft_memchr.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_array_concat.o",
+            "src/array/ft_array_concat.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/array/ft_array_concat.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_array_sinter.o",
+            "src/array/ft_array_sinter.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/array/ft_array_sinter.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_stack_new.o",
+            "src/stack/ft_stack_new.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/stack/ft_stack_new.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_string_append_cstr.o",
+            "src/string/ft_string_append_cstr.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/string/ft_string_append_cstr.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/conv_cur_written.o",
+            "src/io/printf/conv_cur_written.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/io/printf/conv_cur_written.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_vec_len.o",
+            "src/vector/ft_vec_len.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/vector/ft_vec_len.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_vec_get.o",
+            "src/vector/ft_vec_get.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/vector/ft_vec_get.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_strjoin.o",
+            "src/cstring/ft_strjoin.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cstring/ft_strjoin.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_string_reserve.o",
+            "src/string/ft_string_reserve.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/string/ft_string_reserve.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/utils.o",
+            "src/io/printf/utils.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/io/printf/utils.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_memcpy.o",
+            "src/cstring/ft_memcpy.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cstring/ft_memcpy.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_strncmp.o",
+            "src/cstring/ft_strncmp.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cstring/ft_strncmp.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_array_issorted.o",
+            "src/array/ft_array_issorted.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/array/ft_array_issorted.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_array_sunion.o",
+            "src/array/ft_array_sunion.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/array/ft_array_sunion.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_cla_int_var.o",
+            "src/cla/ft_cla_int_var.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cla/ft_cla_int_var.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_substr.o",
+            "src/cstring/ft_substr.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cstring/ft_substr.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_array_dup.o",
+            "src/array/ft_array_dup.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/array/ft_array_dup.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_string_length.o",
+            "src/string/ft_string_length.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/string/ft_string_length.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_cla_sanity_check.o",
+            "src/cla/ft_cla_sanity_check.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cla/ft_cla_sanity_check.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_string_output.o",
+            "src/string/ft_string_output.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/string/ft_string_output.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_array_ssub.o",
+            "src/array/ft_array_ssub.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/array/ft_array_ssub.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_putstr_fd.o",
+            "src/io/ft_putstr_fd.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/io/ft_putstr_fd.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_gnl.o",
+            "src/io/gnl/ft_gnl.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/io/gnl/ft_gnl.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_vec_set_len.o",
+            "src/vector/ft_vec_set_len.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/vector/ft_vec_set_len.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-Wpedantic",
+            "-Iinclude",
+            "-Ilibft/include",
+            "-o",
+            "src/stack/stack_new.o",
+            "src/stack/stack_new.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/push_swap",
+        "file": "src/stack/stack_new.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_array_capacity.o",
+            "src/string/ft_array_capacity.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/string/ft_array_capacity.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_strlen.o",
+            "src/cstring/ft_strlen.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cstring/ft_strlen.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_isspace.o",
+            "src/ctype/ft_isspace.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/ctype/ft_isspace.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_array_length.o",
+            "src/array/ft_array_length.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/array/ft_array_length.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/conv_char.o",
+            "src/io/printf/conv_char.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/io/printf/conv_char.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_array_suniq.o",
+            "src/array/ft_array_suniq.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/array/ft_array_suniq.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_strrchr.o",
+            "src/cstring/ft_strrchr.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cstring/ft_strrchr.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_ulltob.o",
+            "src/intconv/ft_ulltob.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/intconv/ft_ulltob.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_toupper.o",
+            "src/ctype/ft_toupper.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/ctype/ft_toupper.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_strlcat.o",
+            "src/cstring/ft_strlcat.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cstring/ft_strlcat.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_array_sub.o",
+            "src/array/ft_array_sub.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/array/ft_array_sub.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_strcasestr.o",
+            "src/cstring/ft_strcasestr.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cstring/ft_strcasestr.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_isalnum.o",
+            "src/ctype/ft_isalnum.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/ctype/ft_isalnum.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_string_capacity.o",
+            "src/string/ft_string_capacity.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/string/ft_string_capacity.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_gnl_utils.o",
+            "src/io/gnl/ft_gnl_utils.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/io/gnl/ft_gnl_utils.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/conv_str.o",
+            "src/io/printf/conv_str.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/io/printf/conv_str.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_string_new_cstr.o",
+            "src/string/ft_string_new_cstr.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/string/ft_string_new_cstr.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_vec_cap.o",
+            "src/vector/ft_vec_cap.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/vector/ft_vec_cap.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_array_delete.o",
+            "src/array/ft_array_delete.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/array/ft_array_delete.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_array_destroy.o",
+            "src/array/ft_array_destroy.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/array/ft_array_destroy.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_string_at.o",
+            "src/string/ft_string_at.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/string/ft_string_at.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_strchri.o",
+            "src/cstring/ft_strchri.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cstring/ft_strchri.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_vprintf.o",
+            "src/io/printf/ft_vprintf.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/io/printf/ft_vprintf.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_cla_pos_var.o",
+            "src/cla/ft_cla_pos_var.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cla/ft_cla_pos_var.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_array_new.o",
+            "src/array/ft_array_new.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/array/ft_array_new.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_isalpha.o",
+            "src/ctype/ft_isalpha.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/ctype/ft_isalpha.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_vec_new.o",
+            "src/vector/ft_vec_new.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/vector/ft_vec_new.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_bsort.o",
+            "src/core/ft_bsort.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/core/ft_bsort.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_strcmp.o",
+            "src/cstring/ft_strcmp.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cstring/ft_strcmp.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_strtrim_uniq.o",
+            "src/cstring/ft_strtrim_uniq.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cstring/ft_strtrim_uniq.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_isdigit.o",
+            "src/ctype/ft_isdigit.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/ctype/ft_isdigit.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/conv_int.o",
+            "src/io/printf/conv_int.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/io/printf/conv_int.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/field_width.o",
+            "src/io/printf/field_width.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/io/printf/field_width.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_tolower.o",
+            "src/ctype/ft_tolower.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/ctype/ft_tolower.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_strhssfx.o",
+            "src/cstring/ft_strhssfx.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cstring/ft_strhssfx.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_string_destroy.o",
+            "src/string/ft_string_destroy.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/string/ft_string_destroy.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_stack_peek.o",
+            "src/stack/ft_stack_peek.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/stack/ft_stack_peek.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_itoa.o",
+            "src/intconv/ft_itoa.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/intconv/ft_itoa.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_strinsrt.o",
+            "src/cstring/ft_strinsrt.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cstring/ft_strinsrt.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_vec_del.o",
+            "src/vector/ft_vec_del.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/vector/ft_vec_del.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_btoll.o",
+            "src/strconv/ft_btoll.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/strconv/ft_btoll.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_stack_size.o",
+            "src/stack/ft_stack_size.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/stack/ft_stack_size.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_memset.o",
+            "src/cstring/ft_memset.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cstring/ft_memset.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/parse.o",
+            "src/io/printf/parse.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/io/printf/parse.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_array_insert.o",
+            "src/array/ft_array_insert.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/array/ft_array_insert.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_string_findchar.o",
+            "src/cstring/ft_string_findchar.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cstring/ft_string_findchar.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_strcmpset.o",
+            "src/cstring/ft_strcmpset.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cstring/ft_strcmpset.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_string_tocstring.o",
+            "src/string/ft_string_tocstring.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/string/ft_string_tocstring.c"
+    },
+    {
+        "arguments": [
+            "clang",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I./include/",
+            "-g",
+            "-o",
+            ".obj/ft_strndup.o",
+            "src/cstring/ft_strndup.c"
+        ],
+        "directory": "/home/abrabant/Prog/42/libft",
+        "file": "src/cstring/ft_strndup.c"
+    }
+]
