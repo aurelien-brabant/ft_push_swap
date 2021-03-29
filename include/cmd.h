@@ -6,7 +6,7 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/28 12:04:51 by abrabant          #+#    #+#             */
-/*   Updated: 2021/03/29 19:41:56 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/03/30 01:41:43 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ t_cmd	*cmd_getlist(void);
 ** Valid push swap directives are described in the subject, page 7.
 */
 
-void	cmd_exec(t_cmd *cmdlist, const char *cmd, t_pshswp_stack *a,
+bool	cmd_exec(t_cmd *cmdlist, const char *cmd, t_pshswp_stack *a,
 		t_pshswp_stack *b);
 
 void	cmd_push_a(t_pshswp_stack *a, t_pshswp_stack *b);
