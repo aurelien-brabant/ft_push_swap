@@ -6,10 +6,11 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/28 23:14:10 by abrabant          #+#    #+#             */
-/*   Updated: 2021/03/29 13:51:57 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/03/29 14:29:07 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "cmd.h"
 #include "push_swap.h"
 #include "pshswp_stack.h"
 

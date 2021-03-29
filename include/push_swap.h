@@ -6,11 +6,12 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 13:26:17 by abrabant          #+#    #+#             */
-/*   Updated: 2021/03/29 13:53:20 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/03/29 14:32:43 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
+# include "cmd.h"
 # include "pshswp_stack.h"
 # define PUSH_SWAP_H
 # define PS_SWAP_A		"sa"
@@ -31,5 +32,11 @@
 
 void	outcmd(const char *cmd);
 void	generate(t_pshswp_stack *a);
+
+/*
+** Sorting algorithms
+*/
+
+void	bsort(t_cmd *cmdlist, t_pshswp_stack *a);
 
 #endif
