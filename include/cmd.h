@@ -6,7 +6,7 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/28 12:04:51 by abrabant          #+#    #+#             */
-/*   Updated: 2021/03/28 14:17:04 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/03/29 19:41:56 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 typedef struct	s_cmd
 {
 	char	*name;
-	void	(*trigger)();
+	void	(*trigger)(t_pshswp_stack *a, t_pshswp_stack *b);
 }				t_cmd;
 
 t_cmd	*cmd_getlist(void);
@@ -34,10 +34,14 @@ void	cmd_exec(t_cmd *cmdlist, const char *cmd, t_pshswp_stack *a,
 
 void	cmd_push_a(t_pshswp_stack *a, t_pshswp_stack *b);
 void	cmd_push_b(t_pshswp_stack *a, t_pshswp_stack *b);
-void	cmd_swap_a(t_pshswp_stack *a);
-void	cmd_swap_b(t_pshswp_stack *a);
+void	cmd_swap_a(t_pshswp_stack *a, t_pshswp_stack *b);
+void	cmd_swap_b(t_pshswp_stack *a, t_pshswp_stack *b);
 void	cmd_swap_double(t_pshswp_stack *a, t_pshswp_stack *b);
 void	cmd_rotate_up_double(t_pshswp_stack *a, t_pshswp_stack *b);
 void	cmd_rotate_down_double(t_pshswp_stack *a, t_pshswp_stack *b);
+void	cmd_rotate_up_a(t_pshswp_stack *a, t_pshswp_stack *b);
+void	cmd_rotate_up_b(t_pshswp_stack *a, t_pshswp_stack *b);
+void	cmd_rotate_down_a(t_pshswp_stack *a, t_pshswp_stack *b);
+void	cmd_rotate_down_b(t_pshswp_stack *a, t_pshswp_stack *b);
 
 #endif

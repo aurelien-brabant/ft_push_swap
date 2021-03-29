@@ -1,37 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   generate.c                                         :+:      :+:    :+:   */
+/*   debug.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/29 13:01:12 by abrabant          #+#    #+#             */
-/*   Updated: 2021/03/29 18:00:43 by abrabant         ###   ########.fr       */
+/*   Created: 2021/03/29 19:24:09 by abrabant          #+#    #+#             */
+/*   Updated: 2021/03/29 19:25:01 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#ifndef DEBUG_H
+# include "pshswp_stack.h"
+# define DEBUG_h
 
-#include "cmd.h"
-#include "libft/io.h"
-#include "push_swap.h"
-#include "pshswp_stack.h"
+void	print_stacks(t_pshswp_stack *a, t_pshswp_stack *b);
 
-void	outcmd(const char *cmd)
-{
-	ft_putstr_fd(cmd, STDOUT_FILENO);
-	ft_putchar_fd('\n', STDOUT_FILENO);
-}
-
-void	generate(t_pshswp_stack *a)
-{
-	t_pshswp_stack	*b;
-	t_cmd			*cmdlist;
-
-	cmdlist = cmd_getlist();
-	(void)a;
-	b = stack_new();
-	if (b == NULL)
-		return ;
-	bsort(cmdlist, a, b);
-}
+#endif

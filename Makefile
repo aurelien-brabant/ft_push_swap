@@ -6,16 +6,16 @@
 #    By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/27 15:53:06 by abrabant          #+#    #+#              #
-#    Updated: 2021/03/29 14:21:58 by abrabant         ###   ########.fr        #
+#    Updated: 2021/03/29 19:43:18 by abrabant         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # PROJECT CONFIG
 
 CC					= clang
-CFLAGS				= -Wall -Wextra -Werror -Wpedantic -Iinclude -Ilibft/include
+CFLAGS				= -g -Wall -Wextra -Werror -Wpedantic -Iinclude -Ilibft/include
 LD					= clang
-LD_FLAGS			= -Llibft -lft
+LD_FLAGS			= -g -Llibft -lft
 
 CHECKER_TARGET		= checker
 PUSH_SWAP_TARGET	= push_swap
@@ -33,9 +33,11 @@ PSHSWP_STACK		= $(addprefix src/stack/, stack_new.c stack_push.c	\
 PUSH_SWAP			= $(addprefix src/push_swap/, generate.c bsort.c)
 
 CMD					= $(addprefix src/cmd/, cmd_getlist.c cmd.c cmd2.c	\
-					  cmd_exec.c)
+					  cmd3.c cmd_exec.c)
 
-SRCS				= $(PSHSWP_STACK) $(CMD) $(PUSH_SWAP)
+DEBUG				= $(addprefix src/debug/, print_stacks.c)
+
+SRCS				= $(PSHSWP_STACK) $(CMD) $(PUSH_SWAP) $(DEBUG)
 
 OBJS				= $(SRCS:%.c=%.o)
 

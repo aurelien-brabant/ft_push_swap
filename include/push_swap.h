@@ -6,7 +6,7 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 13:26:17 by abrabant          #+#    #+#             */
-/*   Updated: 2021/03/29 14:32:43 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/03/29 18:00:25 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,6 @@ void	generate(t_pshswp_stack *a);
 ** Sorting algorithms
 */
 
-void	bsort(t_cmd *cmdlist, t_pshswp_stack *a);
+void	bsort(t_cmd *cmdlist, t_pshswp_stack *a, t_pshswp_stack *b);
 
 #endif
