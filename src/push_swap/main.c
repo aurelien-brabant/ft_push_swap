@@ -6,7 +6,7 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/28 23:14:10 by abrabant          #+#    #+#             */
-/*   Updated: 2021/03/29 14:29:07 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/03/29 23:05:52 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ int	main(int ac, char **av)
 		ac = 1;
 	while (--ac > 0 && parse_arg(av[ac], gc, a))
 		;
-	generate(a);
+	generate(gc, a);
 	ft_gc_destroy(gc);
 	return (0);
 }
