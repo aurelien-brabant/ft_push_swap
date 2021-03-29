@@ -6,10 +6,11 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/28 23:14:10 by abrabant          #+#    #+#             */
-/*   Updated: 2021/03/29 01:41:25 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/03/29 13:51:57 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "push_swap.h"
 #include "pshswp_stack.h"
 
 #include "libft/gc.h"
@@ -58,19 +59,16 @@ int	main(int ac, char **av)
 {
 	t_gc			gc;
 	t_pshswp_stack	*a;
-	t_pshswp_stack	*b;
 
 	gc = ft_gc_new();
 	if (gc == NULL)
 		return (1);
 	a = ft_gc_add(gc, stack_new(), stack_destroy);
-	b = ft_gc_add(gc, stack_new(), stack_destroy);
-	if (a == NULL || b == NULL)
+	if (a == NULL)
 		ac = 1;
 	while (--ac > 0 && parse_arg(av[ac], gc, a))
 		;
-	while (!stack_isempty(a))
-		printf("%lld\n", stack_pop(a));
+	generate(a);
 	ft_gc_destroy(gc);
 	return (0);
 }
