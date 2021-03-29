@@ -6,7 +6,7 @@
 #    By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/27 15:53:06 by abrabant          #+#    #+#              #
-#    Updated: 2021/03/28 23:40:21 by abrabant         ###   ########.fr        #
+#    Updated: 2021/03/29 14:21:58 by abrabant         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,17 +23,19 @@ TEST_TARGET			= test
 
 # SOURCES
 
-HEADERS				= $(addprefix include/, pshswp_stack.h)
+HEADERS				= $(addprefix include/, pshswp_stack.h push_swap.h)
 
 PSHSWP_STACK		= $(addprefix src/stack/, stack_new.c stack_push.c	\
 						stack_pop.c stack_isempty.c stack_peek.c		\
 						stack_rotate_up.c stack_rotate_down.c			\
-						stack_destroy.c)
+						stack_size.c stack_lookup.c stack_destroy.c)
+
+PUSH_SWAP			= $(addprefix src/push_swap/, generate.c bsort.c)
 
 CMD					= $(addprefix src/cmd/, cmd_getlist.c cmd.c cmd2.c	\
 					  cmd_exec.c)
 
-SRCS				= $(PSHSWP_STACK) $(CMD)
+SRCS				= $(PSHSWP_STACK) $(CMD) $(PUSH_SWAP)
 
 OBJS				= $(SRCS:%.c=%.o)
 
