@@ -6,7 +6,7 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/27 16:02:36 by abrabant          #+#    #+#             */
-/*   Updated: 2021/03/30 13:49:54 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/03/30 14:22:26 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,10 @@
 ** the t_pshswp_stack ADT.
 */
 
-#include <stddef.h>
-#include <stdbool.h>
-
 #ifndef PSHSWP_STACK_H
 # define PSHSWP_STACK_H
+# include <stddef.h>
+# include <stdbool.h>
 
 /*
 ** A top value of zero means that the stack is empty. Top element of the stack
@@ -43,8 +42,6 @@ typedef struct s_pshswp_stack
 	size_t		top;
 	long long	*data;
 }	t_pshswp_stack;
-
-
 
 t_pshswp_stack	*stack_new(void);
 

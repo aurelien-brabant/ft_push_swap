@@ -6,7 +6,7 @@
 #    By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/27 15:53:06 by abrabant          #+#    #+#              #
-#    Updated: 2021/03/30 13:50:43 by abrabant         ###   ########.fr        #
+#    Updated: 2021/03/30 14:20:19 by abrabant         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,6 @@ LD_FLAGS			= -g -Llibft -lft
 
 CHECKER_TARGET		= checker
 PUSH_SWAP_TARGET	= push_swap
-TEST_TARGET			= test
 
 # SOURCES
 
@@ -55,10 +54,6 @@ $(CHECKER_TARGET): libft/libft.a $(HEADERS) $(OBJS) src/checker/main.o
 $(PUSH_SWAP_TARGET): libft/libft.a $(HEADERS) $(OBJS) src/push_swap/main.o
 	@$(LD) -o $(PUSH_SWAP_TARGET) $(OBJS) src/push_swap/main.o $(LD_FLAGS)
 	@printf "[\033[1;36mPUSH-SWAP\033[0;m] Generated \033[1;32m$(PUSH_SWAP_TARGET)\033[0m\n"
-
-$(TEST_TARGET): libft/libft.a $(HEADERS) $(OBJS) src/main.o
-	@$(LD) -o $(TEST_TARGET) $(OBJS) src/main.o $(LD_FLAGS)
-	@printf "[\033[1;36mPUSH-SWAP\033[0;m] Generated \033[1;32m$(TEST_TARGET)\033[0m\n"
 
 norm:
 	@norminette src

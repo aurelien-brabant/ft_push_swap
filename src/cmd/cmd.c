@@ -6,7 +6,7 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/28 12:59:44 by abrabant          #+#    #+#             */
-/*   Updated: 2021/03/29 19:46:04 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/03/30 14:19:35 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	cmd_swap_a(t_pshswp_stack *a, t_pshswp_stack *b)
 {
 	long long	top;
 	long long	top_minus_one;
-	
+
 	(void)b;
 	if (stack_size(a) < 2)
 		return ;

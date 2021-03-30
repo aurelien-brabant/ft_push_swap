@@ -6,7 +6,7 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/28 16:04:28 by abrabant          #+#    #+#             */
-/*   Updated: 2021/03/30 01:41:21 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/03/30 14:19:27 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ bool	cmd_exec(t_cmd *cmdlist, const char *cmd, t_pshswp_stack *a,
 		if (cmp_ret == 0)
 		{
 			cmdlist[mid].trigger(a, b);
-			//print_stacks(a, b);
 			return (true);
 		}
 		if (cmp_ret > 0)

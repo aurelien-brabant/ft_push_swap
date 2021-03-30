@@ -6,7 +6,7 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/28 23:14:10 by abrabant          #+#    #+#             */
-/*   Updated: 2021/03/29 23:05:52 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/03/30 14:12:14 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 static int	reverse_int_push(t_array split, t_pshswp_stack *a)
 {
 	long long	nb;
-	size_t	i;
+	size_t		i;
 
 	i = ft_array_length(split);
 	while (i-- > 0)
@@ -42,7 +42,7 @@ static bool	parse_arg(char *av, t_gc gc, t_pshswp_stack *a)
 	t_string		arg;
 	t_array			split;
 
-	arg = ft_gc_add(gc, ft_string_new_cstr(av), 
+	arg = ft_gc_add(gc, ft_string_new_cstr(av),
 			(void (*)(void *))ft_string_destroy);
 	if (arg == NULL)
 		return (false);
@@ -53,8 +53,6 @@ static bool	parse_arg(char *av, t_gc gc, t_pshswp_stack *a)
 	reverse_int_push(split, a);
 	return (true);
 }
-
-#include <stdio.h>
 
 int	main(int ac, char **av)
 {

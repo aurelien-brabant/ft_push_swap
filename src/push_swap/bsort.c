@@ -6,7 +6,7 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 13:59:14 by abrabant          #+#    #+#             */
-/*   Updated: 2021/03/29 23:07:42 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/03/30 14:18:04 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,27 +28,24 @@ void	bsort(t_cmd *cmdlist, t_pshswp_stack *a, t_pshswp_stack *b)
 	size_t	top;
 
 	top = stack_size(a);
-	if (top-- == 0)
-		return ;
-	while (top > 0)
+	while (top-- > 0)
 	{
 		if (stack_lookup(a, top) > stack_lookup(a, top - 1))
 		{
 			while (stack_size(a) - 1 > top)
 			{
-				outcmd("pb");
-				cmd_exec(cmdlist, "pb", a, b);
+				outcmd(PS_PUSH_B);
+				cmd_exec(cmdlist, PS_PUSH_B, a, b);
 			}
-			outcmd("sa");
-			cmd_exec(cmdlist, "sa", a, b);
+			outcmd(PS_SWAP_A);
+			cmd_exec(cmdlist, PS_SWAP_A, a, b);
 			while (!stack_isempty(b))
 			{
-				outcmd("pa");
-				cmd_exec(cmdlist, "pa", a, b);
+				outcmd(PS_PUSH_A);
+				cmd_exec(cmdlist, PS_PUSH_A, a, b);
 			}
-			top = stack_size(a) - 1;
+			top = stack_size(a);
 			continue ;
 		}
-		--top;
 	}
 }
