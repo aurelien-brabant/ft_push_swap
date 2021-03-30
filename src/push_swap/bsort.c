@@ -6,7 +6,7 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 13:59:14 by abrabant          #+#    #+#             */
-/*   Updated: 2021/03/30 14:18:04 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/03/30 19:07:09 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,36 +16,38 @@
 #include "push_swap.h"
 
 /*
-** Implementation of bubble sort using push_swap instruction language.
-** This sorting algorithm is naive and should not be actually used.
-** It is here just for demonstration purpose.
-**
-** Stack B is not needed for that one.
-*/
+ ** Implementation of bubble sort using push_swap instruction language.
+ ** This sorting algorithm is naive and should not be actually used.
+ ** It is here just for demonstration purpose.
+ **
+ ** Stack B is not needed for that one.
+ */
 
 void	bsort(t_cmd *cmdlist, t_pshswp_stack *a, t_pshswp_stack *b)
 {
+	size_t	max_pass;
 	size_t	top;
+	size_t	pass;
 
-	top = stack_size(a);
-	while (top-- > 0)
+	max_pass = stack_size(a);
+	top = max_pass;
+	pass = 0;
+	while (pass < max_pass - 1)
 	{
-		if (stack_lookup(a, top) > stack_lookup(a, top - 1))
+		top = max_pass;
+		while (top-- > pass + 1)
 		{
-			while (stack_size(a) - 1 > top)
+			if (stack_lookup(a, top) > stack_lookup(a, top - 1))
 			{
-				outcmd(PS_PUSH_B);
-				cmd_exec(cmdlist, PS_PUSH_B, a, b);
+				while (stack_size(a) - 1 > top)
+					outcmd(cmdlist, "pb", a, b);
+				outcmd(cmdlist, "sa", a, b);
+				if (top - 1 > 0)
+					outcmd(cmdlist, "pb", a, b);
 			}
-			outcmd(PS_SWAP_A);
-			cmd_exec(cmdlist, PS_SWAP_A, a, b);
-			while (!stack_isempty(b))
-			{
-				outcmd(PS_PUSH_A);
-				cmd_exec(cmdlist, PS_PUSH_A, a, b);
-			}
-			top = stack_size(a);
-			continue ;
 		}
+		while (!stack_isempty(b))
+			outcmd(cmdlist, PS_PUSH_A, a, b);
+		++pass;
 	}
 }

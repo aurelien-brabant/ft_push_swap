@@ -6,7 +6,7 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 13:26:17 by abrabant          #+#    #+#             */
-/*   Updated: 2021/03/29 23:05:35 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/03/30 18:38:59 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,8 @@
 ** output the given push_swap cmd on stdout, followed by a newline character.
 */
 
-void	outcmd(const char *cmd);
+void	outcmd(t_cmd *cmdlist, const char *cmd, t_pshswp_stack *a,
+		t_pshswp_stack *b);
 void	generate(t_gc gc, t_pshswp_stack *a);
 
 /*
