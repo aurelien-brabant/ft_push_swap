@@ -6,7 +6,7 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/27 16:02:36 by abrabant          #+#    #+#             */
-/*   Updated: 2021/03/29 14:14:34 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/03/30 13:49:54 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,8 @@ long long		stack_peek(t_pshswp_stack *stack);
 long long		stack_lookup(t_pshswp_stack *stack, size_t index);
 
 size_t			stack_size(t_pshswp_stack *stack);
+
+bool			stack_issorted(t_pshswp_stack *stack);
 
 bool			stack_isempty(t_pshswp_stack *stack);
 
