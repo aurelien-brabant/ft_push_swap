@@ -6,7 +6,7 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/28 23:14:10 by abrabant          #+#    #+#             */
-/*   Updated: 2021/03/30 14:20:00 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/03/30 17:33:32 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,9 +84,9 @@ int	main(int ac, char **av)
 	free(line);
 	execute_instruction_set(set, a);
 	if (stack_issorted(a))
-		ft_putstr_fd("OK", STDOUT_FILENO);
+		ft_putstr_fd("OK\n", STDOUT_FILENO);
 	else
-		ft_putstr_fd("KO", STDOUT_FILENO);
+		ft_putstr_fd("KO\n", STDOUT_FILENO);
 	ft_gc_destroy(gc);
 	return (0);
 }
