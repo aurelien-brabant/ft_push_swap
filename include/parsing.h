@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   errcode.h                                          :+:      :+:    :+:   */
+/*   parsing.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/03 11:16:07 by abrabant          #+#    #+#             */
-/*   Updated: 2021/04/03 13:06:23 by abrabant         ###   ########.fr       */
+/*   Created: 2021/04/03 12:33:40 by abrabant          #+#    #+#             */
+/*   Updated: 2021/04/03 12:46:23 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ERRCODE_H
-# define ERRCODE_H
-# define ERRCODE_INVALID_NB 1
-# define ERRCODE_UNSUPPORTED_INSTRUCTION 2
-# define ERRCODE_BADALLOC 3
-# define ERRCODE_INT_OOB 4	// out of bounds
-# define ERRCODE_STACK_DUPLICATES 5
+#ifndef PARSING_H
+# define PARSING_H
+# include "libft/gc.h"
+# include "psstack.h"
+
+/*
+** Parse the command line arguments, filling the stack A with all the
+** passed numbers. If no error occurs, the stack is returned. Otherwise,
+** the execution of the program will be stopped, and the content of gc
+** will be freed.
+*/
+
+t_psstack	*parse_cli(int ac, char **av, t_gc gc);
+
 #endif

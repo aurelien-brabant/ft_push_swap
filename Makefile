@@ -6,7 +6,7 @@
 #    By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/03 11:30:39 by abrabant          #+#    #+#              #
-#    Updated: 2021/04/03 12:07:13 by abrabant         ###   ########.fr        #
+#    Updated: 2021/04/03 12:47:11 by abrabant         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,9 +39,11 @@ CMD					= $(addprefix src/cmd/, cmd_getlist.c cmd.c cmd2.c	\
 
 PSCORE				= $(addprefix src/pscore/, exit_program.c)
 
+PARSING				= $(addprefix src/parsing/, parse_cli.c)
+
 DEBUG				= $(addprefix src/debug/, print_stacks.c)
 
-SRCS				= $(PSHSWP_STACK) $(CMD) $(PUSH_SWAP) $(CHECKER) $(DEBUG) $(PSCORE)
+SRCS				= $(PSHSWP_STACK) $(CMD) $(PUSH_SWAP) $(CHECKER) $(DEBUG) $(PSCORE) $(PARSING)
 
 OBJS				= $(SRCS:%.c=%.o)
 
