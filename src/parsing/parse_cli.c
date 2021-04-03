@@ -6,7 +6,7 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 12:29:47 by abrabant          #+#    #+#             */
-/*   Updated: 2021/04/03 13:07:27 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/04/03 13:23:27 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,9 @@ static int	reverse_int_push(t_array split, t_psstack *a, t_gc gc)
 			exit_program(gc, ERRCODE_INVALID_NB);
 		if (nb > INT_MAX || nb < INT_MIN)
 			exit_program(gc, ERRCODE_INT_OOB);
-		stack_push((t_psstack *)a, nb);
+		if (stack_search(a, nb) != -1)
+			exit_program(gc, ERRCODE_STACK_DUPLICATES);
+		stack_push(a, nb);
 	}
 	return (0);
 }

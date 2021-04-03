@@ -6,7 +6,7 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/27 16:02:36 by abrabant          #+#    #+#             */
-/*   Updated: 2021/04/03 12:08:11 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/04/03 13:20:05 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,14 @@ size_t			stack_size(t_psstack *stack);
 bool			stack_issorted(t_psstack *stack);
 
 bool			stack_isempty(t_psstack *stack);
+
+/*
+** Check if stack contains duplicate elements. As elements are obviously not
+** sorted, a simple linear search is used to determine if duplicates are present.
+** Time complexity of such an algorithm is O(n^2), which is definitely slow.
+*/
+
+int				stack_search(t_psstack *stack, int nb);
 
 void			stack_rotate_up(t_psstack *stack);
 
