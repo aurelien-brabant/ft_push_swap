@@ -1,5 +1,4 @@
 *.o
 test
-checker
 ./push_swap
 .cache

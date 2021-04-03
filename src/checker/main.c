@@ -6,7 +6,7 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/28 23:14:10 by abrabant          #+#    #+#             */
-/*   Updated: 2021/03/30 14:20:00 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/04/03 11:27:57 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,29 +16,30 @@
 #include "cmd.h"
 #include "pshswp_stack.h"
 #include "checker.h"
+#include "pscore.h"
+#include "errcode.h"
 
 #include "libft/io.h"
 #include "libft/gc.h"
 #include "libft/string.h"
 #include "libft/array.h"
 
-static int	reverse_int_push(t_array split, t_pshswp_stack *a)
+static int	reverse_int_push(t_array split, t_pshswp_stack *a, t_gc gc)
 {
 	long long	nb;
+	bool		err;
 	size_t		i;
 
+	err = false;
 	i = ft_array_length(split);
 	while (i-- > 0)
 	{
-		nb = ft_string_btoll((t_string)ft_array_get(split, i), 10);
+		nb = ft_string_btoll((t_string)ft_array_get(split, i), 10, &err);
+		if (err)
+			exit_program(gc, ERRCODE_INVALID_NB);
 		stack_push((t_pshswp_stack *)a, nb);
 	}
 	return (0);
-}
-
-static void	destroy_split(void *split)
-{
-	ft_array_destroy((t_array)split, (void (*)(void *))ft_string_destroy);
 }
 
 static bool	parse_arg(char *av, t_gc gc, t_pshswp_stack *a)
@@ -53,8 +54,8 @@ static bool	parse_arg(char *av, t_gc gc, t_pshswp_stack *a)
 	split = ft_string_split(arg, " ");
 	if (split == NULL)
 		return (false);
-	ft_gc_add(gc, split, destroy_split);
-	reverse_int_push(split, a);
+	ft_gc_add(gc, split, ft_string_destroy_split);
+	reverse_int_push(split, a, gc);
 	return (true);
 }
 

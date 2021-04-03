@@ -6,7 +6,7 @@
 #    By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/27 15:53:06 by abrabant          #+#    #+#              #
-#    Updated: 2021/03/30 14:20:19 by abrabant         ###   ########.fr        #
+#    Updated: 2021/04/03 10:56:44 by abrabant         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,9 +37,11 @@ CHECKER				= $(addprefix src/checker/, execute_instruction_set.c)
 CMD					= $(addprefix src/cmd/, cmd_getlist.c cmd.c cmd2.c	\
 					  cmd3.c cmd_exec.c)
 
+PSCORE				= $(addprefix src/pscore/, exit_program.c)
+
 DEBUG				= $(addprefix src/debug/, print_stacks.c)
 
-SRCS				= $(PSHSWP_STACK) $(CMD) $(PUSH_SWAP) $(CHECKER) $(DEBUG)
+SRCS				= $(PSHSWP_STACK) $(CMD) $(PUSH_SWAP) $(CHECKER) $(DEBUG) $(PSCORE)
 
 OBJS				= $(SRCS:%.c=%.o)
 
