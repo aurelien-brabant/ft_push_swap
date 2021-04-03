@@ -13,8 +13,8 @@
 #ifndef CHECKER_H
 # define CHECKER_H
 # include "libft/array.h"
-# include "pshswp_stack.h"
+# include "psstack.h"
 
-void	execute_instruction_set(t_array set, t_pshswp_stack *a);
+void	execute_instruction_set(t_array set, t_psstack *a);
 
 #endif

@@ -14,7 +14,7 @@
 #include <stdlib.h>
 
 #include "cmd.h"
-#include "pshswp_stack.h"
+#include "psstack.h"
 #include "checker.h"
 #include "pscore.h"
 #include "errcode.h"
@@ -24,7 +24,7 @@
 #include "libft/string.h"
 #include "libft/array.h"
 
-static int	reverse_int_push(t_array split, t_pshswp_stack *a, t_gc gc)
+static int	reverse_int_push(t_array split, t_psstack *a, t_gc gc)
 {
 	long long	nb;
 	bool		err;
@@ -37,12 +37,12 @@ static int	reverse_int_push(t_array split, t_pshswp_stack *a, t_gc gc)
 		nb = ft_string_btoll((t_string)ft_array_get(split, i), 10, &err);
 		if (err)
 			exit_program(gc, ERRCODE_INVALID_NB);
-		stack_push((t_pshswp_stack *)a, nb);
+		stack_push((t_psstack *)a, nb);
 	}
 	return (0);
 }
 
-static bool	parse_arg(char *av, t_gc gc, t_pshswp_stack *a)
+static bool	parse_arg(char *av, t_gc gc, t_psstack *a)
 {
 	t_string		arg;
 	t_array			split;
@@ -69,7 +69,7 @@ int	main(int ac, char **av)
 	t_gc			gc;
 	t_array			set;
 	char			*line;
-	t_pshswp_stack	*a;
+	t_psstack	*a;
 
 	gc = ft_gc_new();
 	if (gc == NULL)

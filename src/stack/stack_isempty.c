@@ -12,9 +12,9 @@
 
 #include <stdbool.h>
 
-#include "pshswp_stack.h"
+#include "psstack.h"
 
-bool	stack_isempty(t_pshswp_stack *stack)
+bool	stack_isempty(t_psstack *stack)
 {
 	return (stack->size == 0);
 }

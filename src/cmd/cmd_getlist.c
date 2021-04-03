@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "cmd.h"
-#include "pshswp_stack.h"
+#include "psstack.h"
 
 /*
 ** NOTE: Commands are lexiographically sorted to make use of a binary search

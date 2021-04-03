@@ -15,14 +15,14 @@
 #include "libft/array.h"
 #include "libft/io.h"
 
-#include "pshswp_stack.h"
+#include "psstack.h"
 #include "cmd.h"
 
-void	execute_instruction_set(t_array set, t_pshswp_stack *a)
+void	execute_instruction_set(t_array set, t_psstack *a)
 {
 	t_cmd			*cmdlist;
 	char			*instruction;
-	t_pshswp_stack	*b;
+	t_psstack	*b;
 	size_t			i;
 
 	cmdlist = cmd_getlist();

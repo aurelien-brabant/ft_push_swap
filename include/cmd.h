@@ -11,14 +11,14 @@
 /* ************************************************************************** */
 
 #ifndef CMD_H
-# include "pshswp_stack.h"
+# include "psstack.h"
 # define CMD_H
 # define CMD_NB 11
 
 typedef struct s_cmd
 {
 	char	*name;
-	void	(*trigger)(t_pshswp_stack *a, t_pshswp_stack *b);
+	void	(*trigger)(t_psstack *a, t_psstack *b);
 }				t_cmd;
 
 t_cmd	*cmd_getlist(void);
@@ -28,20 +28,20 @@ t_cmd	*cmd_getlist(void);
 ** Valid push swap directives are described in the subject, page 7.
 */
 
-bool	cmd_exec(t_cmd *cmdlist, const char *cmd, t_pshswp_stack *a,
-				t_pshswp_stack *b);
+bool	cmd_exec(t_cmd *cmdlist, const char *cmd, t_psstack *a,
+				t_psstack *b);
 
 
-void	cmd_push_a(t_pshswp_stack *a, t_pshswp_stack *b);
-void	cmd_push_b(t_pshswp_stack *a, t_pshswp_stack *b);
-void	cmd_swap_a(t_pshswp_stack *a, t_pshswp_stack *b);
-void	cmd_swap_b(t_pshswp_stack *a, t_pshswp_stack *b);
-void	cmd_swap_double(t_pshswp_stack *a, t_pshswp_stack *b);
-void	cmd_rotate_up_double(t_pshswp_stack *a, t_pshswp_stack *b);
-void	cmd_rotate_down_double(t_pshswp_stack *a, t_pshswp_stack *b);
-void	cmd_rotate_up_a(t_pshswp_stack *a, t_pshswp_stack *b);
-void	cmd_rotate_up_b(t_pshswp_stack *a, t_pshswp_stack *b);
-void	cmd_rotate_down_a(t_pshswp_stack *a, t_pshswp_stack *b);
-void	cmd_rotate_down_b(t_pshswp_stack *a, t_pshswp_stack *b);
+void	cmd_push_a(t_psstack *a, t_psstack *b);
+void	cmd_push_b(t_psstack *a, t_psstack *b);
+void	cmd_swap_a(t_psstack *a, t_psstack *b);
+void	cmd_swap_b(t_psstack *a, t_psstack *b);
+void	cmd_swap_double(t_psstack *a, t_psstack *b);
+void	cmd_rotate_up_double(t_psstack *a, t_psstack *b);
+void	cmd_rotate_down_double(t_psstack *a, t_psstack *b);
+void	cmd_rotate_up_a(t_psstack *a, t_psstack *b);
+void	cmd_rotate_up_b(t_psstack *a, t_psstack *b);
+void	cmd_rotate_down_a(t_psstack *a, t_psstack *b);
+void	cmd_rotate_down_b(t_psstack *a, t_psstack *b);
 
 #endif

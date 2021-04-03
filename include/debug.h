@@ -12,8 +12,8 @@
 
 #ifndef DEBUG_H
 # define DEBUG_H
-# include "pshswp_stack.h"
+# include "psstack.h"
 
-void	print_stacks(t_pshswp_stack *a, t_pshswp_stack *b);
+void	print_stacks(t_psstack *a, t_psstack *b);
 
 #endif

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pshswp_stack.h"
+#include "psstack.h"
 #include "libft/io.h"
 
 static size_t	max(size_t a, size_t b)
@@ -20,7 +20,7 @@ static size_t	max(size_t a, size_t b)
 	return (b);
 }
 
-void	print_stacks(t_pshswp_stack *a, t_pshswp_stack *b)
+void	print_stacks(t_psstack *a, t_psstack *b)
 {
 	size_t	topa;
 	size_t	topb;

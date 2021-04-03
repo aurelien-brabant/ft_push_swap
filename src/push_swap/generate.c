@@ -16,11 +16,11 @@
 #include "libft/io.h"
 #include "libft/gc.h"
 #include "push_swap.h"
-#include "pshswp_stack.h"
+#include "psstack.h"
 
-void	generate(t_gc gc, t_pshswp_stack *a)
+void	generate(t_gc gc, t_psstack *a)
 {
-	t_pshswp_stack	*b;
+	t_psstack	*b;
 	t_cmd			*cmdlist;
 
 	cmdlist = cmd_getlist();

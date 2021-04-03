@@ -13,14 +13,14 @@
 #include <stdint.h>
 #include <stdio.h>
 
-#include "pshswp_stack.h"
+#include "psstack.h"
 #include "cmd.h"
 #include "debug.h"
 
 #include "libft/cstring.h"
 
-bool	cmd_exec(t_cmd *cmdlist, const char *cmd, t_pshswp_stack *a,
-		t_pshswp_stack *b)
+bool	cmd_exec(t_cmd *cmdlist, const char *cmd, t_psstack *a,
+		t_psstack *b)
 {
 	int8_t	low;
 	int8_t	mid;

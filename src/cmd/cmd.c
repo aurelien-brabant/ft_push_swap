@@ -10,22 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pshswp_stack.h"
+#include "psstack.h"
 #include <stdio.h>
 
-void	cmd_push_a(t_pshswp_stack *a, t_pshswp_stack *b)
+void	cmd_push_a(t_psstack *a, t_psstack *b)
 {
 	if (stack_size(b) > 0)
 		stack_push(a, stack_pop(b));
 }
 
-void	cmd_push_b(t_pshswp_stack *a, t_pshswp_stack *b)
+void	cmd_push_b(t_psstack *a, t_psstack *b)
 {
 	if (stack_size(a) > 0)
 		stack_push(b, stack_pop(a));
 }
 
-void	cmd_swap_a(t_pshswp_stack *a, t_pshswp_stack *b)
+void	cmd_swap_a(t_psstack *a, t_psstack *b)
 {
 	long long	top;
 	long long	top_minus_one;
@@ -39,7 +39,7 @@ void	cmd_swap_a(t_pshswp_stack *a, t_pshswp_stack *b)
 	stack_push(a, top_minus_one);
 }
 
-void	cmd_swap_b(t_pshswp_stack *a, t_pshswp_stack *b)
+void	cmd_swap_b(t_psstack *a, t_psstack *b)
 {
 	long long	top;
 	long long	top_minus_one;
@@ -53,7 +53,7 @@ void	cmd_swap_b(t_pshswp_stack *a, t_pshswp_stack *b)
 	stack_push(b, top_minus_one);
 }
 
-void	cmd_swap_double(t_pshswp_stack *a, t_pshswp_stack *b)
+void	cmd_swap_double(t_psstack *a, t_psstack *b)
 {
 	cmd_swap_a(a, b);
 	cmd_swap_b(a, b);

@@ -12,11 +12,11 @@
 
 #include <stdlib.h>
 
-#include "pshswp_stack.h"
+#include "psstack.h"
 
-t_pshswp_stack	*stack_new(void)
+t_psstack	*stack_new(void)
 {
-	t_pshswp_stack	*stack;
+	t_psstack	*stack;
 
 	stack = malloc(sizeof (*stack));
 	if (stack == NULL)

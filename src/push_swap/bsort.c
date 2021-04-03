@@ -12,7 +12,7 @@
 
 #include <stdio.h>
 #include "cmd.h"
-#include "pshswp_stack.h"
+#include "psstack.h"
 #include "push_swap.h"
 
 /*
@@ -23,7 +23,7 @@
  ** Stack B is not needed for that one.
  */
 
-void	bsort(t_cmd *cmdlist, t_pshswp_stack *a, t_pshswp_stack *b)
+void	bsort(t_cmd *cmdlist, t_psstack *a, t_psstack *b)
 {
 	size_t	max_pass;
 	size_t	top;

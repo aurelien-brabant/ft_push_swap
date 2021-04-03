@@ -10,16 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pshswp_stack.h"
+#include "psstack.h"
 #include "cmd.h"
 
-void	cmd_rotate_up_double(t_pshswp_stack *a, t_pshswp_stack *b)
+void	cmd_rotate_up_double(t_psstack *a, t_psstack *b)
 {
 	cmd_rotate_up_a(a, b);
 	cmd_rotate_up_b(a, b);
 }
 
-void	cmd_rotate_down_double(t_pshswp_stack *a, t_pshswp_stack *b)
+void	cmd_rotate_down_double(t_psstack *a, t_psstack *b)
 {
 	cmd_rotate_down_a(a, b);
 	cmd_rotate_down_b(a, b);

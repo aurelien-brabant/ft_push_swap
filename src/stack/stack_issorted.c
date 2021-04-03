@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pshswp_stack.h"
+#include "psstack.h"
 
-bool	stack_issorted(t_pshswp_stack *stack)
+bool	stack_issorted(t_psstack *stack)
 {
 	size_t	top;
 

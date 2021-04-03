@@ -12,10 +12,10 @@
 
 #include "libft/io.h"
 #include "cmd.h"
-#include "pshswp_stack.h"
+#include "psstack.h"
 
-void	outcmd(t_cmd *cmdlist, const char *cmd, t_pshswp_stack *a,
-		t_pshswp_stack *b)
+void	outcmd(t_cmd *cmdlist, const char *cmd, t_psstack *a,
+		t_psstack *b)
 {
 	ft_printf("%s\n", cmd);
 	cmd_exec(cmdlist, cmd, a, b);

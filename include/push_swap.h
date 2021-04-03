@@ -13,7 +13,7 @@
 #ifndef PUSH_SWAP_H
 # include "libft/gc.h"
 # include "cmd.h"
-# include "pshswp_stack.h"
+# include "psstack.h"
 # define PUSH_SWAP_H
 # define PS_SWAP_A		"sa"
 # define PS_SWAP_B		"sb"
@@ -31,14 +31,14 @@
 ** output the given push_swap cmd on stdout, followed by a newline character.
 */
 
-void	outcmd(t_cmd *cmdlist, const char *cmd, t_pshswp_stack *a,
-		t_pshswp_stack *b);
-void	generate(t_gc gc, t_pshswp_stack *a);
+void	outcmd(t_cmd *cmdlist, const char *cmd, t_psstack *a,
+		t_psstack *b);
+void	generate(t_gc gc, t_psstack *a);
 
 /*
 ** Sorting algorithms
 */
 
-void	bsort(t_cmd *cmdlist, t_pshswp_stack *a, t_pshswp_stack *b);
+void	bsort(t_cmd *cmdlist, t_psstack *a, t_psstack *b);
 
 #endif

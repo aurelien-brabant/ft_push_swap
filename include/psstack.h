@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pshswp_stack.h                                     :+:      :+:    :+:   */
+/*   psstack.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/27 16:02:36 by abrabant          #+#    #+#             */
-/*   Updated: 2021/03/30 14:22:26 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/04/03 12:08:11 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 **
 ** NOTE: this is a stack implementation, not the direct implementation of
 ** the push_swap directives. They are implemented separately, and use
-** the t_pshswp_stack ADT.
+** the t_psstack ADT.
 */
 
 #ifndef PSHSWP_STACK_H
@@ -35,46 +35,46 @@
 ** can be accessed using data[top - 1] if top != 0.
 */
 
-typedef struct s_pshswp_stack
+typedef struct s_psstack
 {
 	size_t		size;
 	size_t		capacity;
 	size_t		top;
-	long long	*data;
-}	t_pshswp_stack;
+	int			*data;
+}	t_psstack;
 
-t_pshswp_stack	*stack_new(void);
+t_psstack		*stack_new(void);
 
 /*
 ** Push a new number on the top of the stack.
 */
 
-void			stack_push(t_pshswp_stack *stack, long long nb);
+void			stack_push(t_psstack *stack, int nb);
 
 /*
 ** Pop, i.e remove the element on the top of the stack and return it.
 */
 
-long long		stack_pop(t_pshswp_stack *stack);
+int				stack_pop(t_psstack *stack);
 
 /*
 ** Get the value of the top element of the stack
 */
 
-long long		stack_peek(t_pshswp_stack *stack);
+int				stack_peek(t_psstack *stack);
 
-long long		stack_lookup(t_pshswp_stack *stack, size_t index);
+int				stack_lookup(t_psstack *stack, size_t index);
 
-size_t			stack_size(t_pshswp_stack *stack);
+size_t			stack_size(t_psstack *stack);
 
-bool			stack_issorted(t_pshswp_stack *stack);
+bool			stack_issorted(t_psstack *stack);
 
-bool			stack_isempty(t_pshswp_stack *stack);
+bool			stack_isempty(t_psstack *stack);
 
-void			stack_rotate_up(t_pshswp_stack *stack);
+void			stack_rotate_up(t_psstack *stack);
 
-void			stack_rotate_down(t_pshswp_stack *stack);
+void			stack_rotate_down(t_psstack *stack);
 
-void			stack_destroy(t_pshswp_stack *stack);
+void			stack_destroy(t_psstack *stack);
 
 #endif

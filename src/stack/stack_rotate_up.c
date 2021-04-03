@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pshswp_stack.h"
+#include "psstack.h"
 
-void	stack_rotate_up(t_pshswp_stack *stack)
+void	stack_rotate_up(t_psstack *stack)
 {
 	long long	rotated;
 	size_t		i;

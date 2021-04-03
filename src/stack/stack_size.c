@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pshswp_stack.h"
+#include "psstack.h"
 
-size_t	stack_size(t_pshswp_stack *stack)
+size_t	stack_size(t_psstack *stack)
 {
 	return (stack->size);
 }
