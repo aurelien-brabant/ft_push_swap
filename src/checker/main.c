@@ -6,7 +6,7 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 11:30:27 by abrabant          #+#    #+#             */
-/*   Updated: 2021/04/03 12:55:13 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/04/03 14:10:17 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	main(int ac, char **av)
 	while (ft_gnl(STDIN_FILENO, &line) > 0)
 		ft_array_append(set, line);
 	free(line);
-	execute_instruction_set(set, a);
+	execute_instruction_set(set, a, gc);
 	if (stack_issorted(a))
 		ft_putstr_fd("OK\n", STDOUT_FILENO);
 	else
