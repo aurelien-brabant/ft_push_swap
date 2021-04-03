@@ -6,7 +6,7 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 13:26:17 by abrabant          #+#    #+#             */
-/*   Updated: 2021/03/30 18:38:59 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/04/03 14:47:04 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@
 */
 
 void	outcmd(t_cmd *cmdlist, const char *cmd, t_psstack *a,
-		t_psstack *b);
+			t_psstack *b);
 void	generate(t_gc gc, t_psstack *a);
 
 /*

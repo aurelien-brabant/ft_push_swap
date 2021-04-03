@@ -6,7 +6,7 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 13:01:12 by abrabant          #+#    #+#             */
-/*   Updated: 2021/03/30 18:41:32 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/04/03 14:46:47 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 void	generate(t_gc gc, t_psstack *a)
 {
 	t_psstack	*b;
-	t_cmd			*cmdlist;
+	t_cmd		*cmdlist;
 
 	cmdlist = cmd_getlist();
 	(void)a;

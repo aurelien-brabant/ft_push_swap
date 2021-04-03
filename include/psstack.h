@@ -6,7 +6,7 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/27 16:02:36 by abrabant          #+#    #+#             */
-/*   Updated: 2021/04/03 13:20:05 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/04/03 14:47:23 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@
 ** the t_psstack ADT.
 */
 
-#ifndef PSHSWP_STACK_H
-# define PSHSWP_STACK_H
+#ifndef PSSTACK_H
+# define PSSTACK_H
 # include <stddef.h>
 # include <stdbool.h>
 

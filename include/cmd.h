@@ -6,7 +6,7 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/28 12:04:51 by abrabant          #+#    #+#             */
-/*   Updated: 2021/03/30 18:38:35 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/04/03 14:47:32 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ t_cmd	*cmd_getlist(void);
 
 bool	cmd_exec(t_cmd *cmdlist, const char *cmd, t_psstack *a,
 				t_psstack *b);
-
 
 void	cmd_push_a(t_psstack *a, t_psstack *b);
 void	cmd_push_b(t_psstack *a, t_psstack *b);
