@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/03/27 15:53:06 by abrabant          #+#    #+#              #
-#    Updated: 2021/04/03 10:56:44 by abrabant         ###   ########.fr        #
+#    Created: 2021/04/03 11:30:39 by abrabant          #+#    #+#              #
+#    Updated: 2021/04/03 11:30:42 by abrabant         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ PSHSWP_STACK		= $(addprefix src/stack/, stack_new.c stack_push.c	\
 						stack_size.c stack_lookup.c stack_issorted.c	\
 						stack_destroy.c)
 
-PUSH_SWAP			= $(addprefix src/push_swap/, generate.c bsort.c)
+PUSH_SWAP			= $(addprefix src/push_swap/, generate.c bsort.c outcmd.c)
 
 CHECKER				= $(addprefix src/checker/, execute_instruction_set.c)
 
