@@ -6,7 +6,7 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 13:01:12 by abrabant          #+#    #+#             */
-/*   Updated: 2021/04/03 14:46:47 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/04/04 05:30:55 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,20 @@
 #include "cmd.h"
 #include "libft/io.h"
 #include "libft/gc.h"
+#include "libft/array.h"
 #include "push_swap.h"
 #include "psstack.h"
 
-void	generate(t_gc gc, t_psstack *a)
+void	generate(t_gc gc, t_stacks *stacks, t_array set)
 {
-	t_psstack	*b;
 	t_cmd		*cmdlist;
 
 	cmdlist = cmd_getlist();
-	(void)a;
-	b = ft_gc_add(gc, stack_new(), stack_destroy);
-	if (b == NULL)
+	stacks->b = ft_gc_add(gc, stack_new(), stack_destroy);
+	if (stacks->b == NULL)
 		return ;
-	bsort(cmdlist, a, b);
+	if (stack_issorted(stacks->a))
+		return ;
+	if (stack_size(stacks->a) == 3)
+		sort3(cmdlist, stacks, set);
 }

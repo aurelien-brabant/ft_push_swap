@@ -6,7 +6,7 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/28 01:55:38 by abrabant          #+#    #+#             */
-/*   Updated: 2021/04/03 12:08:32 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/04/05 04:28:50 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 int	stack_peek(t_psstack *stack)
 {
-	return (stack->data[stack->size - 1]);
+	if (stack->top != NULL)
+		return (stack->top->val);
+	return (0);
 }

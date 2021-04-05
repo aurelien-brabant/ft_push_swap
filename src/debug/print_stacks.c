@@ -6,20 +6,23 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 19:09:51 by abrabant          #+#    #+#             */
-/*   Updated: 2021/03/29 22:44:26 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/04/05 06:21:06 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "psstack.h"
 #include "libft/io.h"
 
+/*
 static size_t	max(size_t a, size_t b)
 {
 	if (a > b)
 		return (a);
 	return (b);
 }
+*/
 
+/*
 void	print_stacks(t_psstack *a, t_psstack *b)
 {
 	size_t	topa;
@@ -45,3 +48,4 @@ void	print_stacks(t_psstack *a, t_psstack *b)
 	}
 	ft_putstr_fd("|---|---|\n", 1);
 }
+*/

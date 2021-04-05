@@ -6,7 +6,7 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/27 16:02:36 by abrabant          #+#    #+#             */
-/*   Updated: 2021/04/03 14:47:23 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/04/05 06:18:40 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,25 @@
 ** can be accessed using data[top - 1] if top != 0.
 */
 
+typedef struct s_psnode
+{
+	struct s_psnode		*prev;
+	struct s_psnode		*next;
+	int					val;
+}	t_psnode;
+
 typedef struct s_psstack
 {
-	size_t		size;
-	size_t		capacity;
-	size_t		top;
-	int			*data;
+	size_t			size;
+	struct s_psnode	*top;
+	struct s_psnode	*bot;
 }	t_psstack;
+
+typedef struct s_stacks
+{
+	t_psstack	*a;
+	t_psstack	*b;
+}	t_stacks;
 
 t_psstack		*stack_new(void);
 
@@ -55,7 +67,7 @@ void			stack_push(t_psstack *stack, int nb);
 ** Pop, i.e remove the element on the top of the stack and return it.
 */
 
-int				stack_pop(t_psstack *stack);
+void			stack_push_from_to(t_psstack *from, t_psstack *to);
 
 /*
 ** Get the value of the top element of the stack
@@ -82,6 +94,8 @@ int				stack_search(t_psstack *stack, int nb);
 void			stack_rotate_up(t_psstack *stack);
 
 void			stack_rotate_down(t_psstack *stack);
+
+void			stack_swap_top(t_psstack *stack);
 
 void			stack_destroy(t_psstack *stack);
 

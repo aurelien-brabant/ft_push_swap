@@ -6,7 +6,7 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/28 03:07:29 by abrabant          #+#    #+#             */
-/*   Updated: 2021/03/28 03:08:51 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/04/05 06:22:43 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,12 @@
 
 void	stack_rotate_down(t_psstack *stack)
 {
-	long long	rotated;
-	size_t		i;
-
-	rotated = stack->data[0];
-	i = 0;
-	while (i < stack->size - 1)
-	{
-		stack->data[i] = stack->data[i + 1];
-		++i;
-	}
-	stack->data[i] = rotated;
+	if (stack->size < 2)
+		return ;
+	stack->top->next = stack->bot;
+	stack->top->next->prev = stack->top;
+	stack->top = stack->top->next;
+	stack->bot = stack->bot->next;
+	stack->bot->prev = NULL;
+	stack->top->next = NULL;
 }

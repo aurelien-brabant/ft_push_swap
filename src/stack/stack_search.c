@@ -6,7 +6,7 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 13:09:27 by abrabant          #+#    #+#             */
-/*   Updated: 2021/04/03 13:24:22 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/04/05 04:41:48 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,16 @@
 
 int	stack_search(t_psstack *stack, int nb)
 {
-	size_t	i;
-	size_t	size;
+	t_psnode	*cur;
+	size_t		i;
 
-	size = stack_size(stack);
 	i = 0;
-	while (i < size)
+	cur = stack->bot;
+	while (cur != NULL)
 	{
-		if (stack->data[i] == nb)
+		if (cur->val == nb)
 			return (i);
+		cur = cur->next;
 		++i;
 	}
 	return (-1);
