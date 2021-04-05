@@ -6,7 +6,7 @@
 #    By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/03 11:30:39 by abrabant          #+#    #+#              #
-#    Updated: 2021/04/03 13:22:19 by abrabant         ###   ########.fr        #
+#    Updated: 2021/04/05 06:17:55 by abrabant         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,13 +24,14 @@ PUSH_SWAP_TARGET	= push_swap
 
 HEADERS				= $(addprefix include/, psstack.h push_swap.h checker.h)
 
-PSHSWP_STACK		= $(addprefix src/stack/, stack_new.c stack_push.c	\
-						stack_pop.c stack_isempty.c stack_peek.c		\
-						stack_rotate_up.c stack_rotate_down.c			\
-						stack_size.c stack_lookup.c stack_issorted.c	\
-						stack_search.c stack_destroy.c)
+PSHSWP_STACK		= $(addprefix src/stack/, stack_new.c stack_push.c		\
+						stack_push_from_to.c stack_isempty.c stack_peek.c	\
+						stack_rotate_up.c stack_rotate_down.c				\
+						stack_size.c stack_lookup.c stack_issorted.c		\
+						stack_search.c stack_swap_top.c stack_destroy.c)
 
-PUSH_SWAP			= $(addprefix src/push_swap/, generate.c bsort.c outcmd.c)
+PUSH_SWAP			= $(addprefix src/push_swap/, generate.c bsort.c	\
+						outcmd.c gsv.c sort3.c)
 
 CHECKER				= $(addprefix src/checker/, execute_instruction_set.c)
 
