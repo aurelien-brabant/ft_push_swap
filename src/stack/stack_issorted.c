@@ -6,7 +6,7 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/30 13:44:36 by abrabant          #+#    #+#             */
-/*   Updated: 2021/04/05 04:50:20 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/05/10 23:46:00 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ bool	stack_issorted(t_psstack *stack)
 {
 	t_psnode	*cur;
 
+	if (stack->top == NULL)
+		return (true);
 	cur = stack->top;
 	while (cur->prev != NULL)
 	{
