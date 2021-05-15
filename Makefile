@@ -63,7 +63,7 @@ norm:
 	@norminette include
 
 clean:
-	@$(RM) $(OBJS) src/main.o
+	@$(RM) $(OBJS) src/core/main.o src/checker/main.o
 
 fclean: clean
 	@$(RM) $(TEST_TARGET) $(PSHSWP_TARGET) $(CHECKER_TARGET)

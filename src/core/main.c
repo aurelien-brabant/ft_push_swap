@@ -13,7 +13,7 @@
 #include "pushswap/cmd.h"
 #include "pushswap/push_swap.h"
 #include "pushswap/stack.h"
-#include "pushswap/pscore.h"
+#include "pushswap/core.h"
 #include "pushswap/errcode.h"
 #include "pushswap/parsing.h"
 
