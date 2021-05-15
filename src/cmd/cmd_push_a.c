@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack_new.c                                        :+:      :+:    :+:   */
+/*   cmd_push_a.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/27 23:05:17 by abrabant          #+#    #+#             */
-/*   Updated: 2021/04/04 14:58:28 by abrabant         ###   ########.fr       */
+/*   Created: 2021/03/28 13:09:03 by abrabant          #+#    #+#             */
+/*   Updated: 2021/03/28 13:11:03 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <limits.h>
-
 #include "pushswap/stack.h"
 
-t_stack	*stack_new(void)
+void	cmd_push_a(t_stack *a, t_stack *b)
 {
-	t_stack	*stack;
-
-	stack = malloc(sizeof (*stack));
-	stack->size = 0;
-	stack->bot = NULL;
-	stack->top = NULL;
-	stack->max = INT_MIN;
-	stack->min = INT_MAX;
-	return (stack);
+	stack_push_from_to(b, a);
 }

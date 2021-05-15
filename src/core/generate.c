@@ -19,6 +19,7 @@
 #include "pushswap/cmd.h"
 #include "pushswap/push_swap.h"
 #include "pushswap/stack.h"
+#include "pushswap/core.h"
 
 void	generate(t_gc gc, t_stacks *stacks, t_array set)
 {
@@ -30,6 +31,7 @@ void	generate(t_gc gc, t_stacks *stacks, t_array set)
 		return ;
 	if (stack_issorted(stacks->a))
 		return ;
-	if (stack_size(stacks->a) == 3)
-		sort3(cmdlist, stacks, set);
+	/*if (stack_size(stacks->a) == 3)
+		sort3(cmdlist, stacks, set);*/
+	chunk_sort(gc, cmdlist, stacks, set);
 }

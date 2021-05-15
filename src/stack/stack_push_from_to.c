@@ -16,24 +16,32 @@
 
 void	stack_push_from_to(t_stack *from, t_stack *to)
 {
-	t_psnode	*tmp;
+	t_psnode	*new_from_top;
 
 	if (from->size == 0)
 		return ;
-	--from->size;
-	++to->size;
-	tmp = from->top->prev;
-	if (to->top == NULL)
+	new_from_top = from->top->prev; 
+	if (to->size == 0)
 	{
 		to->top = from->top;
-		to->bot = to->top;
+		to->bot = from->top;
+		to->top->prev = to->bot;
+		to->bot->next = to->top;
+		from->top = new_from_top;
 	}
 	else
 	{
 		to->top->next = from->top;
-		from->top->prev = to->top;
+		to->top->next->next = NULL;
+		to->top->next->prev = to->top;
 		to->top = to->top->next;
+
+		from->top = new_from_top;
+		if (from->top != NULL)
+			from->top->next = NULL;
+		else
+			from->bot = NULL;
 	}
-	from->top = tmp;
-	from->top->next = NULL;
+	++to->size;
+	--from->size;
 }
