@@ -2,7 +2,7 @@
 
 #include "pushswap/stack.h"
 
-int	stack_get_max_index(t_stack *stack)
+void	stack_get_max(t_stack *stack, int *hold_max, int *hold_max_index)
 {
 	t_psnode	*cur;
 	int		max;
@@ -23,10 +23,13 @@ int	stack_get_max_index(t_stack *stack)
 		cur = cur->prev;
 		++index;
 	}
-	return (max_index);
+	if (hold_max != NULL)
+		*hold_max = max;
+	if (hold_max_index != NULL)
+		*hold_max_index = max_index;
 }
 
-int	stack_get_min_index(t_stack *stack)
+void	stack_get_min(t_stack *stack, int *hold_min, int *hold_min_index)
 {
 	t_psnode	*cur;
 	int		min;
@@ -47,5 +50,8 @@ int	stack_get_min_index(t_stack *stack)
 		cur = cur->prev;
 		++index;
 	}
-	return (min_index);
+	if (hold_min != NULL)
+		*hold_min = min;
+	if (hold_min_index != NULL)
+		*hold_min_index = min_index;
 }

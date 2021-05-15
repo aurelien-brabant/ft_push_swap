@@ -87,8 +87,8 @@ void			stack_swap_top(t_stack *stack);
 
 void			stack_destroy(t_stack *stack);
 
-int			stack_get_min_index(t_stack *stack);
+void	stack_get_max(t_stack *stack, int *hold_max, int *hold_max_index);
 
-int			stack_get_max_index(t_stack *stack);
+void	stack_get_min(t_stack *stack, int *hold_min, int *hold_min_index);
 
 #endif
