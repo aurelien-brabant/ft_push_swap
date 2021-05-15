@@ -73,19 +73,21 @@ void	rotate_to_top_a(t_cmd *cmdlist, t_stacks *stacks, t_array set, int item_ind
 */
 
 
-/*
+
 void	pop_b_in_sorted_order(t_cmd *cmdlist, t_stacks *stacks, t_array set)
 {
-	t_psnode	*cur;
-	int	max_index;
+	int		i;
+	int	item_index;
 
-	cur = stacks->b->top;
-	while (!stack_isempty(stacks->b))
+	while (stacks->b->size > 0)
 	{
+		item_index = stack_get_max_index(stacks->b);
+		i = 0;
+		while (i++ < item_index)
+			outcmd(cmdlist, "rb", stacks, set);
+		outcmd(cmdlist, "pa", stacks, set);
 	}
 }
-*/
-
 
 void	chunk_sort(t_gc gc, t_cmd *cmdlist, t_stacks *stacks, t_array set)
 {
@@ -121,7 +123,7 @@ void	chunk_sort(t_gc gc, t_cmd *cmdlist, t_stacks *stacks, t_array set)
 		rotate_to_top_a(cmdlist, stacks, set, item_index);
 		outcmd(cmdlist, "pb", stacks, set);
 	}
-	//pop_b_in_sorted_order();
+	pop_b_in_sorted_order(cmdlist, stacks, set);
 
 	/*
 	for (size_t chunk_id = 0; chunk_id < CHUNK_NB; ++chunk_id) {

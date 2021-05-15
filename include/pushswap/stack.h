@@ -45,6 +45,8 @@ typedef struct s_psnode
 typedef struct s_stack
 {
 	size_t			size;
+	int				max; 
+	int				min;
 	struct s_psnode	*top;
 	struct s_psnode	*bot;
 }	t_stack;
@@ -84,5 +86,9 @@ void			stack_rotate_down(t_stack *stack);
 void			stack_swap_top(t_stack *stack);
 
 void			stack_destroy(t_stack *stack);
+
+int			stack_get_min_index(t_stack *stack);
+
+int			stack_get_max_index(t_stack *stack);
 
 #endif

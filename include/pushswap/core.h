@@ -12,6 +12,7 @@
 
 #ifndef CORE_H
 # define CORE_H
+# define CHUNK_NB 5
 # include "libft/gc.h"
 # include "libft/array.h"
 # include "pushswap/cmd.h"
@@ -27,6 +28,12 @@
 # define PS_REV_ROT_A	"rra"
 # define PS_REV_ROT_B	"rrb"
 # define PS_REV_ROT_AB	"rrr"
+
+typedef struct s_chunk
+{
+	int	lb; /* lower bound */
+	int	ub; /* upper bound */
+}	t_chunk;
 
 void	exit_program(t_gc gc, int exit_code);
 
@@ -50,5 +57,6 @@ int		gsv(t_stack *a, size_t index);
 
 void	bsort(t_cmd *cmdlist, t_stacks *stacks, t_array set);
 void	sort3(t_cmd *cmdlist, t_stacks *stacks, t_array set);
+void	chunk_sort(t_gc gc, t_cmd *cmdlist, t_stacks *stacks, t_array set);
 
 #endif
