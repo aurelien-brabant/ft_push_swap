@@ -67,6 +67,26 @@ void	rotate_to_top_a(t_cmd *cmdlist, t_stacks *stacks, t_array set, int item_ind
 		outcmd(cmdlist, cmd, stacks, set);
 }
 
+/*
+** chunk sort should have placed higher values on the top of stack b, but
+** due to the fact we're using chunks, these are not completely sorted.
+*/
+
+
+/*
+void	pop_b_in_sorted_order(t_cmd *cmdlist, t_stacks *stacks, t_array set)
+{
+	t_psnode	*cur;
+	int	max_index;
+
+	cur = stacks->b->top;
+	while (!stack_isempty(stacks->b))
+	{
+	}
+}
+*/
+
+
 void	chunk_sort(t_gc gc, t_cmd *cmdlist, t_stacks *stacks, t_array set)
 {
 	int		chunk_step; 
@@ -101,6 +121,7 @@ void	chunk_sort(t_gc gc, t_cmd *cmdlist, t_stacks *stacks, t_array set)
 		rotate_to_top_a(cmdlist, stacks, set, item_index);
 		outcmd(cmdlist, "pb", stacks, set);
 	}
+	//pop_b_in_sorted_order();
 
 	/*
 	for (size_t chunk_id = 0; chunk_id < CHUNK_NB; ++chunk_id) {

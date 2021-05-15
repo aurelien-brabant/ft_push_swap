@@ -45,6 +45,6 @@ int	main(int ac, char **av)
 	stacks.a = parse_cli(ac, av, gc);
 	generate(gc, &stacks, set);
 	ft_array_foreach(set, print_instruction, NULL);
-	printf("max: %d\nmin: %d\n", stacks.a->max, stacks.a->min);
+	printf("max: %d\nmin: %d\n", stack_get_max_index(stacks.b), stack_get_min_index(stacks.b));
 	exit_program(gc, 0);
 }
