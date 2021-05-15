@@ -14,7 +14,8 @@
 # define CHECKER_H
 # include "libft/array.h"
 # include "libft/gc.h"
-# include "psstack.h"
+
+# include "pushswap/stack.h"
 
 void	execute_instruction_set(t_array set, t_stacks *stacks, t_gc gc);
 

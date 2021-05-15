@@ -13,11 +13,11 @@
 #include <unistd.h>
 #include <stdlib.h>
 
-#include "psstack.h"
-#include "checker.h"
-#include "pscore.h"
-#include "errcode.h"
-#include "parsing.h"
+#include "pushswap/stack.h"
+#include "pushswap/checker.h"
+#include "pushswap/core.h"
+#include "pushswap/errcode.h"
+#include "pushswap/parsing.h"
 
 #include "libft/io.h"
 #include "libft/gc.h"

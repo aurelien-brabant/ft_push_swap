@@ -11,10 +11,12 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft/cstring.h"
-#include "psstack.h"
 
-void	stack_push(t_psstack *stack, int nb)
+#include "libft/cstring.h"
+
+#include "pushswap/stack.h"
+
+void	stack_push(t_stack *stack, int nb)
 {
 	t_psnode	*new_node;
 

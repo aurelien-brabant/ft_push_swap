@@ -13,11 +13,16 @@
 #include <stdint.h>
 #include <stdio.h>
 
-#include "psstack.h"
-#include "cmd.h"
-#include "debug.h"
-
 #include "libft/cstring.h"
+
+#include "pushswap/stack.h"
+#include "pushswap/cmd.h"
+#include "pushswap/debug.h"
+
+/*
+** Retrieve and execute the specified command.
+** cmd_exec is making use of a simple binsearch algorithm to optimize speed.
+*/
 
 bool	cmd_exec(t_cmd *cmdlist, const char *cmd, t_stacks *stacks)
 {

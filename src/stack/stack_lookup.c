@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "psstack.h"
+#include "pushswap/stack.h"
 
 /*
 ** NOTE: if index is found to be greater than half of the stack's size,
@@ -19,7 +19,7 @@
 ** at the middle of the stack.
 */
 
-int	stack_lookup(t_psstack *stack, size_t index)
+int	stack_lookup(t_stack *stack, size_t index)
 {
 	t_psnode	*cur;
 	size_t		i;

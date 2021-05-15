@@ -12,9 +12,9 @@
 
 #include <stdlib.h>
 
-#include "psstack.h"
+#include "pushswap/stack.h"
 
-void	stack_destroy(t_psstack *stack)
+void	stack_destroy(t_stack *stack)
 {
 	t_psnode	*cur;
 	t_psnode	*tmp;

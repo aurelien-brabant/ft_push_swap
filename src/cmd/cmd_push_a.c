@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "psstack.h"
+#include "pushswap/stack.h"
 
-void	cmd_push_a(t_psstack *a, t_psstack *b)
+void	cmd_push_a(t_stack *a, t_stack *b)
 {
 	stack_push(a, stack_pop(b));
 }

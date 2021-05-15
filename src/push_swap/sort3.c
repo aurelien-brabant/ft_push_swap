@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-#include "cmd.h"
+#include "pushswap/push_swap.h"
+#include "pushswap/cmd.h"
 
 void	sort3(t_cmd *cmdlist, t_stacks *stacks, t_array set)
 {

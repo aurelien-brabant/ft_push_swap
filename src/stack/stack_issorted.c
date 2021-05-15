@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "psstack.h"
+#include "pushswap/stack.h"
 
-bool	stack_issorted(t_psstack *stack)
+bool	stack_issorted(t_stack *stack)
 {
 	t_psnode	*cur;
 

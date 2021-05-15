@@ -15,10 +15,10 @@
 #include "libft/array.h"
 #include "libft/io.h"
 
-#include "psstack.h"
-#include "cmd.h"
-#include "pscore.h"
-#include "errcode.h"
+#include "pushswap/stack.h"
+#include "pushswap/cmd.h"
+#include "pushswap/core.h"
+#include "pushswap/errcode.h"
 
 void	execute_instruction_set(t_array set, t_stacks *stacks, t_gc gc)
 {

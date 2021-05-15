@@ -12,8 +12,8 @@
 
 #ifndef DEBUG_H
 # define DEBUG_H
-# include "psstack.h"
+# include "pushswap/stack.h"
 
-void	print_stacks(t_psstack *a, t_psstack *b);
+void	print_stacks(t_stack *a, t_stack *b);
 
 #endif

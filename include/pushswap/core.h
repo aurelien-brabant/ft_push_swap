@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   pscore.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/29 13:26:17 by abrabant          #+#    #+#             */
-/*   Updated: 2021/04/04 05:40:59 by abrabant         ###   ########.fr       */
+/*   Created: 2021/04/03 10:54:39 by abrabant          #+#    #+#             */
+/*   Updated: 2021/04/03 10:56:23 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
+#ifndef CORE_H
+# define CORE_H
 # include "libft/gc.h"
 # include "libft/array.h"
-# include "cmd.h"
-# include "psstack.h"
+# include "pushswap/cmd.h"
 # define PUSH_SWAP_H
 # define PS_SWAP_A		"sa"
 # define PS_SWAP_B		"sb"
@@ -28,20 +28,27 @@
 # define PS_REV_ROT_B	"rrb"
 # define PS_REV_ROT_AB	"rrr"
 
+void	exit_program(t_gc gc, int exit_code);
+
 /*
 ** output the given push_swap cmd on stdout, followed by a newline character.
 */
 
 void	outcmd(t_cmd *cmdlist, const char *cmd, t_stacks *stacks, t_array set);
 void	generate(t_gc gc, t_stacks *stacks, t_array set);
-int		gsv(t_psstack *a, size_t index);
+int		gsv(t_stack *a, size_t index);
 
 /*
-** Sorting algorithms
+** Sorting functions
+**
+** - cmdlist is the list of available commands: it is required to retrieve
+**   and execute the correct command
+** - stacks is a structure which holds the stack A and the stack B.
+** - set is the list of commands, in order, processed so far.
+**   This set is going to be printed at the end of the processing.
 */
 
 void	bsort(t_cmd *cmdlist, t_stacks *stacks, t_array set);
-
 void	sort3(t_cmd *cmdlist, t_stacks *stacks, t_array set);
 
 #endif

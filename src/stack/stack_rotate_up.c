@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "psstack.h"
+#include "pushswap/stack.h"
 
-void	stack_rotate_up(t_psstack *stack)
+void	stack_rotate_up(t_stack *stack)
 {
 	if (stack->size < 2)
 		return ;

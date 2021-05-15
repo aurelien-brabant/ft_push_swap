@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "psstack.h"
+#include "pushswap/stack.h"
 
-int	stack_peek(t_psstack *stack)
+int	stack_peek(t_stack *stack)
 {
 	if (stack->top != NULL)
 		return (stack->top->val);

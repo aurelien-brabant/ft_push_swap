@@ -12,8 +12,9 @@
 
 #include "libft/io.h"
 #include "libft/array.h"
-#include "cmd.h"
-#include "psstack.h"
+
+#include "pushswap/cmd.h"
+#include "pushswap/stack.h"
 
 void	outcmd(t_cmd *cmdlist, const char *cmd, t_stacks *stacks, t_array set)
 {

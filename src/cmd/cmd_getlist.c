@@ -10,12 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cmd.h"
-#include "psstack.h"
+#include "pushswap/cmd.h"
+#include "pushswap/stack.h"
 
 /*
-** NOTE: Commands are lexiographically sorted to make use of a binary search
-** algorithm in cmd_exec.
+** NOTE: Commands are and must be lexiographically sorted to make use
+** of the binary search algorithm in cmd_exec.
 */
 
 t_cmd	*cmd_getlist(void)

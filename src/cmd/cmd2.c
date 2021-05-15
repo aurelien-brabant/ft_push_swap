@@ -10,27 +10,27 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "psstack.h"
+#include "pushswap/stack.h"
 
-void	cmd_rotate_up_a(t_psstack *a, t_psstack *b)
+void	cmd_rotate_up_a(t_stack *a, t_stack *b)
 {
 	(void)b;
 	stack_rotate_up(a);
 }
 
-void	cmd_rotate_up_b(t_psstack *a, t_psstack *b)
+void	cmd_rotate_up_b(t_stack *a, t_stack *b)
 {
 	(void)a;
 	stack_rotate_up(b);
 }
 
-void	cmd_rotate_down_a(t_psstack *a, t_psstack *b)
+void	cmd_rotate_down_a(t_stack *a, t_stack *b)
 {
 	(void)b;
 	stack_rotate_down(a);
 }
 
-void	cmd_rotate_down_b(t_psstack *a, t_psstack *b)
+void	cmd_rotate_down_b(t_stack *a, t_stack *b)
 {
 	(void)a;
 	stack_rotate_down(b);

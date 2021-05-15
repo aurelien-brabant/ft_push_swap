@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "psstack.h"
+#include "pushswap/stack.h"
 
-void	stack_swap_top(t_psstack *stack)
+void	stack_swap_top(t_stack *stack)
 {
 	int	tmp;
 

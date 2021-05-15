@@ -12,9 +12,9 @@
 
 #include <stdlib.h>
 
-#include "psstack.h"
+#include "pushswap/stack.h"
 
-void	stack_push_from_to(t_psstack *from, t_psstack *to)
+void	stack_push_from_to(t_stack *from, t_stack *to)
 {
 	t_psnode	*tmp;
 

@@ -22,11 +22,11 @@
 **
 ** NOTE: this is a stack implementation, not the direct implementation of
 ** the push_swap directives. They are implemented separately, and use
-** the t_psstack ADT.
+** the t_stack ADT.
 */
 
-#ifndef PSSTACK_H
-# define PSSTACK_H
+#ifndef STACK_H
+# define STACK_H
 # include <stddef.h>
 # include <stdbool.h>
 
@@ -42,61 +42,47 @@ typedef struct s_psnode
 	int					val;
 }	t_psnode;
 
-typedef struct s_psstack
+typedef struct s_stack
 {
 	size_t			size;
 	struct s_psnode	*top;
 	struct s_psnode	*bot;
-}	t_psstack;
+}	t_stack;
 
 typedef struct s_stacks
 {
-	t_psstack	*a;
-	t_psstack	*b;
+	t_stack	*a;
+	t_stack	*b;
 }	t_stacks;
 
-t_psstack		*stack_new(void);
+t_stack		*stack_new(void);
 
 /*
 ** Push a new number on the top of the stack.
 */
 
-void			stack_push(t_psstack *stack, int nb);
+void			stack_push(t_stack *stack, int nb);
 
-/*
-** Pop, i.e remove the element on the top of the stack and return it.
-*/
+void			stack_push_from_to(t_stack *from, t_stack *to);
 
-void			stack_push_from_to(t_psstack *from, t_psstack *to);
+int				stack_peek(t_stack *stack);
 
-/*
-** Get the value of the top element of the stack
-*/
+int				stack_lookup(t_stack *stack, size_t index);
 
-int				stack_peek(t_psstack *stack);
+size_t			stack_size(t_stack *stack);
 
-int				stack_lookup(t_psstack *stack, size_t index);
+bool			stack_issorted(t_stack *stack);
 
-size_t			stack_size(t_psstack *stack);
+bool			stack_isempty(t_stack *stack);
 
-bool			stack_issorted(t_psstack *stack);
+int				stack_search(t_stack *stack, int nb);
 
-bool			stack_isempty(t_psstack *stack);
+void			stack_rotate_up(t_stack *stack);
 
-/*
-** Check if stack contains duplicate elements. As elements are obviously not
-** sorted, a simple linear search is used to determine if duplicates are present.
-** Time complexity of such an algorithm is O(n^2), which is definitely slow.
-*/
+void			stack_rotate_down(t_stack *stack);
 
-int				stack_search(t_psstack *stack, int nb);
+void			stack_swap_top(t_stack *stack);
 
-void			stack_rotate_up(t_psstack *stack);
-
-void			stack_rotate_down(t_psstack *stack);
-
-void			stack_swap_top(t_psstack *stack);
-
-void			stack_destroy(t_psstack *stack);
+void			stack_destroy(t_stack *stack);
 
 #endif

@@ -22,7 +22,7 @@ PUSH_SWAP_TARGET	= push_swap
 
 # SOURCES
 
-HEADERS				= $(addprefix include/, psstack.h push_swap.h checker.h)
+HEADERS				= $(addprefix include/pushswap/, stack.h core.h checker.h errcode.h debug.h parsing.h)
 
 PSHSWP_STACK		= $(addprefix src/stack/, stack_new.c stack_push.c		\
 						stack_push_from_to.c stack_isempty.c stack_peek.c	\

@@ -12,9 +12,9 @@
 
 #include <stdbool.h>
 
-#include "psstack.h"
+#include "pushswap/stack.h"
 
-bool	stack_isempty(t_psstack *stack)
+bool	stack_isempty(t_stack *stack)
 {
 	return (stack->top == NULL);
 }

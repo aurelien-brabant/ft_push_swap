@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "psstack.h"
+#include "pushswap/stack.h"
 
-int	stack_search(t_psstack *stack, int nb)
+int	stack_search(t_stack *stack, int nb)
 {
 	t_psnode	*cur;
 	size_t		i;

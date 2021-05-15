@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "psstack.h"
+#include "pushswap/stack.h"
 
-size_t	stack_size(t_psstack *stack)
+size_t	stack_size(t_stack *stack)
 {
 	return (stack->size);
 }

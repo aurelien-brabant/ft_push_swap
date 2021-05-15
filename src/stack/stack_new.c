@@ -12,11 +12,11 @@
 
 #include <stdlib.h>
 
-#include "psstack.h"
+#include "pushswap/stack.h"
 
-t_psstack	*stack_new(void)
+t_stack	*stack_new(void)
 {
-	t_psstack	*stack;
+	t_stack	*stack;
 
 	stack = malloc(sizeof (*stack));
 	stack->size = 0;

@@ -10,12 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cmd.h"
-#include "push_swap.h"
-#include "psstack.h"
-#include "pscore.h"
-#include "errcode.h"
-#include "parsing.h"
+#include "pushswap/cmd.h"
+#include "pushswap/push_swap.h"
+#include "pushswap/stack.h"
+#include "pushswap/pscore.h"
+#include "pushswap/errcode.h"
+#include "pushswap/parsing.h"
 
 #include "libft/gc.h"
 #include "libft/string.h"

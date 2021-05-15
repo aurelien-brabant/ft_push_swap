@@ -16,11 +16,12 @@
 #include "libft/array.h"
 #include "libft/string.h"
 
-#include "pscore.h"
-#include "psstack.h"
-#include "errcode.h"
+#include "pushswap/stack.h"
+#include "pushswap/core.h"
+#include "pushswap/stack.h"
+#include "pushswap/errcode.h"
 
-static void	reverse_int_push(t_array split, t_psstack *a, t_gc gc)
+static void	reverse_int_push(t_array split, t_stack *a, t_gc gc)
 {
 	long long	nb;
 	bool		err;
@@ -41,7 +42,7 @@ static void	reverse_int_push(t_array split, t_psstack *a, t_gc gc)
 	}
 }
 
-static void	parse_arg(char *av, t_gc gc, t_psstack *a)
+static void	parse_arg(char *av, t_gc gc, t_stack *a)
 {
 	t_string		arg;
 	t_array			split;
@@ -59,9 +60,9 @@ static void	parse_arg(char *av, t_gc gc, t_psstack *a)
 	reverse_int_push(split, a, gc);
 }
 
-t_psstack	*parse_cli(int ac, char **av, t_gc gc)
+t_stack	*parse_cli(int ac, char **av, t_gc gc)
 {
-	t_psstack	*a;
+	t_stack	*a;
 
 	a = ft_gc_add(gc, stack_new(), stack_destroy);
 	if (a == NULL)

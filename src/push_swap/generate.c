@@ -12,12 +12,13 @@
 
 #include <unistd.h>
 
-#include "cmd.h"
 #include "libft/io.h"
 #include "libft/gc.h"
 #include "libft/array.h"
-#include "push_swap.h"
-#include "psstack.h"
+
+#include "pushswap/cmd.h"
+#include "pushswap/push_swap.h"
+#include "pushswap/stack.h"
 
 void	generate(t_gc gc, t_stacks *stacks, t_array set)
 {

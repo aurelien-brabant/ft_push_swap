@@ -10,14 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "psstack.h"
+#include "pushswap/stack.h"
 
 /*
 ** Get Stack Value
 ** Basically some shortcut to stack_lookup
 */
 
-int	gsv(t_psstack *a, size_t index)
+int	gsv(t_stack *a, size_t index)
 {
 	return (stack_lookup(a, index));
 }

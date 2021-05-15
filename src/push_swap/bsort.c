@@ -11,16 +11,14 @@
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include "cmd.h"
-#include "psstack.h"
-#include "push_swap.h"
+#include "pushswap/cmd.h"
+#include "pushswap/stack.h"
+#include "pushswap/push_swap.h"
 
 /*
  ** Implementation of bubble sort using push_swap instruction language.
  ** This sorting algorithm is naive and should not be actually used.
  ** It is here just for demonstration purpose.
- **
- ** Stack B is not needed for that one.
  */
 
 void	bsort(t_cmd *cmdlist, t_stacks *stacks, t_array set)
