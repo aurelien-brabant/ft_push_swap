@@ -29,33 +29,12 @@
 # define STACK_H
 # include <stddef.h>
 # include <stdbool.h>
+# include "pushswap/pstypes.h"
 
 /*
 ** A top value of zero means that the stack is empty. Top element of the stack
 ** can be accessed using data[top - 1] if top != 0.
 */
-
-typedef struct s_psnode
-{
-	struct s_psnode		*prev;
-	struct s_psnode		*next;
-	int					val;
-}	t_psnode;
-
-typedef struct s_stack
-{
-	size_t			size;
-	int				max; 
-	int				min;
-	struct s_psnode	*top;
-	struct s_psnode	*bot;
-}	t_stack;
-
-typedef struct s_stacks
-{
-	t_stack	*a;
-	t_stack	*b;
-}	t_stacks;
 
 t_stack		*stack_new(void);
 

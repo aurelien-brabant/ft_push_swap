@@ -3,10 +3,12 @@
 
 #include "libft/gc.h"
 #include "libft/array.h"
+#include "libft/cstring.h"
 
 #include "pushswap/stack.h"
 #include "pushswap/cmd.h"
 #include "pushswap/core.h"
+#include "pushswap/debug.h"
 
 /* 1 means scan from the top of the stack, -1 means from the bottom. */
 
@@ -44,35 +46,65 @@ int	scan_stack_a_from_top(t_stack *a, t_chunk *chunk)
 	return (-1);
 }
 
-void	rotate_to_top_a(t_cmd *cmdlist, t_stacks *stacks, t_array set, int item_index)
-{
-	char	*cmd;
-	int	offset;
-	int	i;
-
-	if (item_index == 0)
-		return ;
-	if (item_index > (int)stacks->a->size / 2)
-	{
-		cmd = "rra";
-		offset = stacks->a->size - item_index;
-	}
-	else
-	{
-		offset = item_index;
-		cmd = "ra";
-	}
-	i = 0;
-	while (i++ < offset)
-		outcmd(cmdlist, cmd, stacks, set);
-}
-
 /*
 ** Prepare the push of the choosen element which is now on the top of the 
 ** A stack
 */
 
-void	smart_push_to_b(t_cmd *cmdlist, t_stacks *stacks, t_array set)
+
+
+
+/*
+** Move item at index item_index to the top of the target stack.
+** This is done through successive rotate/reverse rotate operations depending
+** on the item_index.
+** TODO: Further optimization may be needed in the future.
+*/
+
+const char	*optimize_cmd(t_pushswap *ps, const char *cmd)
+{
+	int	need_rr;
+	int	max_ind;
+
+	if (ft_strchr(cmd, 'a') != NULL)
+	{
+		stack_get_max(ps->stack_b, NULL, &max_ind);
+		need_rr = max_ind > (int)ps->stack_b->size / 2;
+		if (ft_strcmp(cmd, PS_REV_ROT_A) == 0 && max_ind > 0 && need_rr)
+			return (PS_REV_ROT_AB);
+		if (ft_strcmp(cmd, PS_ROT_A) == 0 && max_ind > 0 && !need_rr)
+			return (PS_ROT_AB);
+	}
+	return (cmd);
+}
+
+void	move_item_to_top(t_pushswap *ps, t_stack *target, int item_index)
+{
+	const char	*cmd;
+	int			offset;
+
+	if ((float)item_index > target->size / 2.0)
+	{
+		offset = target->size - item_index;
+		if (target == ps->stack_a)
+			cmd = PS_REV_ROT_A;
+		else
+			cmd = PS_REV_ROT_B;
+	}
+	else
+	{
+		offset = item_index;
+		if (target == ps->stack_a)
+			cmd = PS_ROT_A;
+		else
+			cmd = PS_ROT_B;
+	}
+	while (offset-- > 0)
+		//outcmd(ps, optimize_cmd(ps, cmd));
+		outcmd(ps, cmd);
+}
+
+void	smart_push_to_b(t_pushswap *ps)
 {
 	int	bmin;
 	int	bmax;
@@ -80,49 +112,30 @@ void	smart_push_to_b(t_cmd *cmdlist, t_stacks *stacks, t_array set)
 	int	bmax_index;
 	int	atopval;
 
-	atopval = stack_peek(stacks->a);
-	stack_get_min(stacks->b, &bmin, &bmin_index);
-	stack_get_max(stacks->b, &bmax, &bmax_index);
+	atopval = stack_peek(ps->stack_a);
+	stack_get_min(ps->stack_b, &bmin, &bmin_index);
+	stack_get_max(ps->stack_b, &bmax, &bmax_index);
+
+	//move_item_to_top(ps, ps->stack_b, bmax_index);
 		
-	/* if atopval < min we need to put this small value at the very bottom of the B stack */
-	if (atopval < bmin)
-	{
-		outcmd(cmdlist, "pb", stacks, set);
-		/* move atopval to the bottom of B stack as it is below the minimum */
-		outcmd(cmdlist, "rb", stacks, set);
-		return ;
-	}
-	outcmd(cmdlist, "pb", stacks, set);
+	outcmd(ps, "pb");
 }
 
-void	pop_b_in_sorted_order(t_cmd *cmdlist, t_stacks *stacks, t_array set)
+void	pop_b_in_sorted_order(t_pushswap *ps)
 {
-	int		i;
 	int	item_index;
-	int	offset;
-	char	*cmd;
+	int	min;
 
-	while (stacks->b->size > 0)
+	while (ps->stack_b->size > 0)
 	{
-		stack_get_max(stacks->b, NULL, &item_index);
-		if (item_index > (int)stacks->b->size / 2)
-		{
-			offset = stacks->b->size - item_index;
-			cmd = "rrb";
-		}
-		else
-		{
-			offset = item_index;
-			cmd = "rb";
-		}
-		i = 0;
-		while (i++ < offset)
-			outcmd(cmdlist, cmd, stacks, set);
-		outcmd(cmdlist, "pa", stacks, set);
+		stack_get_max(ps->stack_b, NULL, &item_index);
+		stack_get_min(ps->stack_b, &min, NULL);
+		move_item_to_top(ps, ps->stack_b, item_index);
+		outcmd(ps, "pa");
 	}
 }
 
-void	chunk_sort(t_gc gc, t_cmd *cmdlist, t_stacks *stacks, t_array set)
+void	chunk_sort(t_pushswap *ps)
 {
 	int		chunk_step; 
 	int		chunk_id;
@@ -132,14 +145,14 @@ void	chunk_sort(t_gc gc, t_cmd *cmdlist, t_stacks *stacks, t_array set)
 	int		nb_chunk;
 	t_chunk	chunk;
 
-	nb_chunk = CHUNK_NB + stacks->a->size / 100 + 1;
-	chunk_step = (stacks->a->max - stacks->a->min) / nb_chunk;
-	chunk = (t_chunk){stacks->a->min, stacks->a->min + chunk_step};
+	nb_chunk = CHUNK_NB + ps->stack_a->size / 100 + 1;
+	chunk_step = (float)(ps->stack_a->max - ps->stack_a->min) / (float)nb_chunk;
+	chunk = (t_chunk){ps->stack_a->min, ps->stack_a->min + chunk_step};
 	chunk_id = 0;
 	while (chunk_id < nb_chunk)
 	{
-		top_index = scan_stack_a_from_top(stacks->a, &chunk);
-		bot_index = scan_stack_a_from_bot(stacks->a, &chunk);
+		top_index = scan_stack_a_from_top(ps->stack_a, &chunk);
+		bot_index = scan_stack_a_from_bot(ps->stack_a, &chunk);
 
 		/* Nothing left in that chunk, go ahead! */
 		if (top_index == -1 && bot_index == -1)
@@ -149,12 +162,13 @@ void	chunk_sort(t_gc gc, t_cmd *cmdlist, t_stacks *stacks, t_array set)
 			chunk_id++;
 			continue ;
 		}
-		if ((int)stacks->a->size - bot_index < top_index)
+		if ((int)ps->stack_a->size - bot_index < top_index)
 			item_index = bot_index;
 		else
 			item_index = top_index;
-		rotate_to_top_a(cmdlist, stacks, set, item_index);
-		smart_push_to_b(cmdlist, stacks, set);
+		move_item_to_top(ps, ps->stack_a, item_index);
+		smart_push_to_b(ps);
 	}
-	pop_b_in_sorted_order(cmdlist, stacks, set);
+	//print_stack(ps->stack_b);
+	pop_b_in_sorted_order(ps);
 }

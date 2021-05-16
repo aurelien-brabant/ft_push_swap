@@ -15,8 +15,8 @@
 # include "libft/array.h"
 # include "libft/gc.h"
 
-# include "pushswap/stack.h"
+# include "pushswap/pstypes.h"
 
-void	execute_instruction_set(t_array set, t_stacks *stacks, t_gc gc);
+void	execute_instruction_set(t_pushswap *ps);
 
 #endif

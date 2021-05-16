@@ -15,6 +15,7 @@
 
 #include "libft/cstring.h"
 
+#include "pushswap/core.h"
 #include "pushswap/stack.h"
 #include "pushswap/cmd.h"
 #include "pushswap/debug.h"
@@ -24,7 +25,7 @@
 ** cmd_exec is making use of a simple binsearch algorithm to optimize speed.
 */
 
-bool	cmd_exec(t_cmd *cmdlist, const char *cmd, t_stacks *stacks)
+bool	cmd_exec(t_pushswap *ps, const char *cmd)
 {
 	int8_t	low;
 	int8_t	mid;
@@ -36,10 +37,10 @@ bool	cmd_exec(t_cmd *cmdlist, const char *cmd, t_stacks *stacks)
 	while (low <= high)
 	{
 		mid = (low + high) / 2;
-		cmp_ret = ft_strcmp(cmd, cmdlist[mid].name);
+		cmp_ret = ft_strcmp(cmd, ps->cmdlist[mid].name);
 		if (cmp_ret == 0)
 		{
-			cmdlist[mid].trigger(stacks->a, stacks->b);
+			ps->cmdlist[mid].trigger(ps->stack_a, ps->stack_b);
 			return (true);
 		}
 		if (cmp_ret > 0)

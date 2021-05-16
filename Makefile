@@ -32,7 +32,7 @@ STACK			= $(addprefix src/stack/, stack_new.c stack_push.c		\
 						stack_search.c stack_swap_top.c stack_destroy.c	\
 						stack_min_max.c)
 
-CORE					= $(addprefix src/core/, generate.c bsort.c	\
+CORE					= $(addprefix src/core/, generate.c \
 						outcmd.c gsv.c sort3.c exit_program.c chunk_sort.c)
 
 CHECKER				= $(addprefix src/checker/, execute_instruction_set.c)

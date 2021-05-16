@@ -10,12 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-#include "pushswap/cmd.h"
-#include "pushswap/push_swap.h"
 #include "pushswap/stack.h"
 #include "pushswap/core.h"
+#include "pushswap/cmd.h"
 #include "pushswap/errcode.h"
 #include "pushswap/parsing.h"
 
@@ -32,18 +29,16 @@ static int	print_instruction(void *instruction)
 
 int	main(int ac, char **av)
 {
-	t_gc		gc;
-	t_stacks	stacks;
-	t_array		set;
+	t_pushswap	ps;
 
-	gc = ft_gc_new();
-	if (gc == NULL)
+	ps.gc = ft_gc_new();
+	if (ps.gc == NULL)
 		return (ERRCODE_BADALLOC);
-	set = ft_gc_add(gc, ft_array_new(50), ft_array_destroy);
-	if (set == NULL)
-		exit_program(gc, ERRCODE_BADALLOC);
-	stacks.a = parse_cli(ac, av, gc);
-	generate(gc, &stacks, set);
-	ft_array_foreach(set, print_instruction, NULL);
-	exit_program(gc, 0);
+	ps.cmdset = ft_gc_add(ps.gc, ft_array_new(50), ft_array_destroy);
+	if (ps.cmdset == NULL)
+		exit_program(ps.gc, ERRCODE_BADALLOC);
+	ps.stack_a = parse_cli(ac, av, ps.gc);
+	generate(&ps);
+	ft_array_foreach(ps.cmdset, print_instruction, NULL);
+	exit_program(ps.gc, 0);
 }

@@ -13,7 +13,6 @@
 #include <stdio.h>
 #include "pushswap/cmd.h"
 #include "pushswap/stack.h"
-#include "pushswap/push_swap.h"
 
 /*
  ** Implementation of bubble sort using push_swap instruction language.

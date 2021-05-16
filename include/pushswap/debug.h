@@ -14,6 +14,6 @@
 # define DEBUG_H
 # include "pushswap/stack.h"
 
-void	print_stacks(t_stack *a, t_stack *b);
+void	print_stack(t_stack *stack);
 
 #endif

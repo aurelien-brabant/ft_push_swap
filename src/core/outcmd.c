@@ -16,8 +16,8 @@
 #include "pushswap/cmd.h"
 #include "pushswap/stack.h"
 
-void	outcmd(t_cmd *cmdlist, const char *cmd, t_stacks *stacks, t_array set)
+void	outcmd(t_pushswap *ps, const char *cmd)
 {
-	ft_array_append(set, (void *)cmd);
-	cmd_exec(cmdlist, cmd, stacks);
+	ft_array_append(ps->cmdset, (void *)cmd);
+	cmd_exec(ps, cmd);
 }

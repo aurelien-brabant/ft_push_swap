@@ -20,19 +20,18 @@
 #include "pushswap/core.h"
 #include "pushswap/errcode.h"
 
-void	execute_instruction_set(t_array set, t_stacks *stacks, t_gc gc)
+void	execute_instruction_set(t_pushswap *ps)
 {
-	t_cmd			*cmdlist;
 	char			*instruction;
 	size_t			i;
 
-	cmdlist = cmd_getlist();
-	stacks->b = ft_gc_add(gc, stack_new(), stack_destroy);
+	ps->cmdlist = cmd_getlist();
+	ps->stack_b = ft_gc_add(ps->gc, stack_new(), stack_destroy);
 	i = 0;
-	while (i < ft_array_length(set))
+	while (i < ft_array_length(ps->cmdset))
 	{
-		instruction = ft_array_get(set, i++);
-		if (instruction == NULL || !cmd_exec(cmdlist, instruction, stacks))
-			exit_program(gc, ERRCODE_UNSUPPORTED_INSTRUCTION);
+		instruction = ft_array_get(ps->cmdset, i++);
+		if (instruction == NULL || !cmd_exec(ps, instruction))
+			exit_program(ps->gc, ERRCODE_UNSUPPORTED_INSTRUCTION);
 	}
 }

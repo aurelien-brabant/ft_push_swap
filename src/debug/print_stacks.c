@@ -53,17 +53,22 @@ void	print_stacks(t_psstack *a, t_psstack *b)
 
 #include <stdio.h>
 
-void	print_chunks(t_stacks *stacks)
+void	print_stack(t_stack *stack)
 {
-	int	chunk_step;
-	t_chunk	chunk;
-	
-	chunk_step = (stacks->a->max - stacks->a->min) / (CHUNK_NB + stacks->a->size / 100);
-	chunk = (t_chunk){stacks->a->min, stacks->a->min + chunk_step};
+	t_psnode	*cur;
+	int		max;
 
-	for (size_t chunk_id = 0; chunk_id < CHUNK_NB; ++chunk_id) {
-		printf("[C%ld] %d - %d\n", chunk_id, chunk.lb, chunk.ub);
-		chunk.lb = chunk.ub + 1;
-		chunk.ub = chunk.lb + chunk_step;
+	stack_get_max(stack, &max, NULL);
+	
+	cur = stack->top;
+	while (cur != NULL)
+	{
+		if (cur->val == max)
+			printf("|     \033[1;31m%d\033[0m     |\n", cur->val);
+		else
+			printf("|     %d     |\n", cur->val);
+		cur = cur->prev;
 	}
 }
+
+#include <stdio.h>
