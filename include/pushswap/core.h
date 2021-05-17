@@ -6,7 +6,7 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 10:54:39 by abrabant          #+#    #+#             */
-/*   Updated: 2021/05/16 12:39:28 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/05/17 09:03:02 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,6 @@ int		gsv(t_stack *a, size_t index);
 //void	bsort(t_cmd *cmdlist, t_stacks *stacks, t_array set);
 void	sort3(t_pushswap *ps);
 void	chunk_sort(t_pushswap *ps);
+void	sort100(t_pushswap *ps);
 
 #endif

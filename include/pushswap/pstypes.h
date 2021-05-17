@@ -42,6 +42,7 @@ typedef struct s_pushswap
 	t_stack	*stack_b;
 	t_array	cmdset;
 	t_gc		gc;
+	int			*slst;
 }	t_pushswap;
 
 #endif

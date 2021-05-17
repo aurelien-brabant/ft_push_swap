@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   psstack.h                                          :+:      :+:    :+:   */
+/*   stack.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/27 16:02:36 by abrabant          #+#    #+#             */
-/*   Updated: 2021/04/05 06:18:40 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/05/17 09:34:09 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,8 +66,10 @@ void			stack_swap_top(t_stack *stack);
 
 void			stack_destroy(t_stack *stack);
 
-void	stack_get_max(t_stack *stack, int *hold_max, int *hold_max_index);
+void			stack_get_max(t_stack *stack, int *hold_max, int *hold_max_index);
 
-void	stack_get_min(t_stack *stack, int *hold_min, int *hold_min_index);
+void			stack_get_min(t_stack *stack, int *hold_min, int *hold_min_index);
+
+int				*stack_to_array(t_stack *stack);
 
 #endif
