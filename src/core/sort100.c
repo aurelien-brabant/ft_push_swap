@@ -6,7 +6,7 @@
 /*   By: abrabant <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/17 09:16:25 by abrabant          #+#    #+#             */
-/*   Updated: 2021/05/17 10:32:01 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/05/17 14:38:45 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,86 +33,64 @@ static int	get_median(int *a, size_t size)
 	return(a[mid]);
 }
 
-static int scan_from_top_for_less_than(t_stack *target, int lim)
+/*
+** Push all integers in stack A that are below the median into stack B.
+*/
+
+void	split(t_pushswap *ps, t_stack *stack, int median)
 {
-	t_psnode	*cur;
-	int			index;
+	int			i;
 
-	index = 0;
-	cur = target->top;
-	while (cur != NULL)
+	i = ps->stack_a->size;
+	while (i > 0)
 	{
-		if (cur->val < lim)
-			return (index);
-		cur = cur->prev;
-		++index;
-	}
-	return (-1);
-}
-
-static int scan_from_bot_for_less_than(t_stack *target, int lim)
-{
-	t_psnode	*cur;
-	int			index;
-
-	index = target->size - 1;
-	cur = target->bot;
-	while (cur != NULL)
-	{
-		if (cur->val < lim)
-			return (index);
-		cur = cur->next;
-		--index;
-	}
-	return (-1);
-}
-
-void	move_to_top(t_pushswap *ps, t_stack *target, int item_index)
-{
-	const char	*cmd;
-	int			offset;
-
-	if (item_index > target->size / 2)
-	{
-		offset = target->size - item_index;
-		if (target == ps->stack_a)
-			cmd = PS_REV_ROT_A;
+		if (stack_peek(stack) < median)
+			outcmd(ps, PS_PUSH_B);
 		else
-			cmd = PS_REV_ROT_B;
+			outcmd(ps, PS_ROT_A);
+		--i;
 	}
-	else
-	{
-		offset = item_index;
-		if (target == ps->stack_a)
-			cmd = PS_ROT_A;
-		else
-			cmd = PS_ROT_B;
-	}
-	while (offset-- > 0)
-		outcmd(ps, cmd);
 }
+
+/*
+static void	sort_a_on_b(t_pushswap *ps, int median)
+{
+	int	min_index;
+
+	while (ps->stack_a->size > 0)
+	{
+		stack_get_min(ps->stack_a, NULL, &min_index);
+		move_to_top(ps, ps->stack_a, min_index);
+		outcmd(ps, PS_PUSH_B);
+	}
+		outcmd(ps, PS_SWAP_A);
+	while (stack_peek(ps->stack_b) > median)
+		outcmd(ps, PS_PUSH_A);
+}
+
+void	sort_b(t_pushswap *ps)
+{
+	int	min_ind;
+	int	max_ind;
+	int	item_ind;
+	int	mid_size;
+
+	while (ps->stack_b->size > 0)
+	{
+		mid_size = ps->stack_a->size / 2;
+		stack_get_max(ps->stack_b, NULL, &max_ind);
+		move_to_top(ps, ps->stack_b, max_ind);
+		outcmd(ps, PS_PUSH_A);
+	}
+}
+*/
 
 void	sort100(t_pushswap *ps)
 {
-	int	median; 
-	int	bot_ind;
-	int	top_ind;
-	int	item_ind;
+	int	median;
 
 	median = get_median(ps->slst, ps->stack_a->size);
-	printf("\nmedian is: %d\n", median);
-	while (1)
-	{
-		top_ind = scan_from_top_for_less_than(ps->stack_a, median);
-		bot_ind = scan_from_bot_for_less_than(ps->stack_a, median);
-		if (top_ind == -1 && bot_ind == -1)
-			break ;
-		if (top_ind < (int)ps->stack_a->size - bot_ind)
-			item_ind = top_ind;
-		else
-			item_ind = bot_ind;
-		move_to_top(ps, ps->stack_a, item_ind);
-		outcmd(ps, PS_PUSH_B);
-	}
+	split(ps, ps->stack_a, median);	
+	//sort_b(ps);
 	print_stack(ps->stack_b);
 }
