@@ -38,6 +38,5 @@ void	generate(t_pushswap *ps)
 	/*if (stack_size(stacks->a) == 3)
 		sort3(cmdlist, stacks, set);*/
 	//chunk_sort(ps);
-	if (ps->stack_a->size == 100)
-		sort100(ps);
+	sort100(ps);
 }

@@ -78,7 +78,7 @@ const char	*optimize_cmd(t_pushswap *ps, const char *cmd)
 	return (cmd);
 }
 
-void	move_item_to_top(t_pushswap *ps, t_stack *target, int item_index)
+static void	move_item_to_top(t_pushswap *ps, t_stack *target, int item_index)
 {
 	const char	*cmd;
 	int			offset;
