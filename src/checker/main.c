@@ -6,7 +6,7 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 11:30:27 by abrabant          #+#    #+#             */
-/*   Updated: 2021/04/05 06:21:18 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/05/18 17:20:58 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "pushswap/stack.h"
 #include "pushswap/checker.h"
-#include "pushswap/core.h"
+#include "pushswap/pscore.h"
 #include "pushswap/errcode.h"
 #include "pushswap/parsing.h"
 
@@ -32,7 +32,7 @@ static void	destroy_instruction(void *cmdset)
 int	main(int ac, char **av)
 {
 	t_pushswap	ps;
-	char			*line;
+	char		*line;
 
 	if (ac == 1)
 		return (0);

@@ -6,7 +6,7 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 13:01:12 by abrabant          #+#    #+#             */
-/*   Updated: 2021/05/17 10:27:10 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/05/18 17:18:45 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 #include "pushswap/cmd.h"
 #include "pushswap/stack.h"
-#include "pushswap/core.h"
+#include "pushswap/pscore.h"
 
 void	generate(t_pushswap *ps)
 {
@@ -33,10 +33,8 @@ void	generate(t_pushswap *ps)
 		return ;
 	ps->slst = stack_to_array(ps->stack_a);
 	ft_quick_sort(ps->slst, ps->stack_a->size, sizeof (int), &ft_gcmp_int);
-	//for (int i = 0; i < ps->stack_a->size; ++i)
-		//printf("%d, ", ps->slst[i]);
-	/*if (stack_size(stacks->a) == 3)
-		sort3(cmdlist, stacks, set);*/
-	//chunk_sort(ps);
-	sort100(ps);
+	if (stack_size(ps->stack_a) < 250)
+		sort100(ps);
+	else
+		sort500(ps);
 }

@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "pushswap/stack.h"
-#include "pushswap/core.h"
+#include "pushswap/pscore.h"
 #include "pushswap/cmd.h"
 #include "pushswap/errcode.h"
 #include "pushswap/parsing.h"

@@ -17,7 +17,7 @@
 #include "libft/string.h"
 
 #include "pushswap/stack.h"
-#include "pushswap/core.h"
+#include "pushswap/pscore.h"
 #include "pushswap/stack.h"
 #include "pushswap/errcode.h"
 

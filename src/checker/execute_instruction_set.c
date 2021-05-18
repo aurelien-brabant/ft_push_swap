@@ -17,7 +17,7 @@
 
 #include "pushswap/stack.h"
 #include "pushswap/cmd.h"
-#include "pushswap/core.h"
+#include "pushswap/pscore.h"
 #include "pushswap/errcode.h"
 
 void	execute_instruction_set(t_pushswap *ps)

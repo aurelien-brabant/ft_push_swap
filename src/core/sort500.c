@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort100.c                                          :+:      :+:    :+:   */
+/*   sort500.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abrabant <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/17 09:16:25 by abrabant          #+#    #+#             */
-/*   Updated: 2021/05/18 14:52:32 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/05/18 17:18:32 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,29 +19,23 @@
 #include "pushswap/stack.h"
 #include "pushswap/cmd.h"
 
-static int	get_median(int *a, size_t size)
-{
-	int	mid;
-
-	mid = size / 2;
-	if (size % 2 == 0)
-		return ((a[mid] + a[mid + 1]) / 2);
-	return (a[mid]);
-}
-
 /*
-** Optimized sorting for 100 items.
+** Optimized sorting for 500 items.
 ** CURRRENT_STATE: in most cases sorting is done with < 900 instructions.
 ** Works for any number of items, but is not super efficient.
 */
 
-void	sort100(t_pushswap *ps)
+void	sort500(t_pushswap *ps)
 {
-	int	median;
+	t_bounds	bounds[6];
+	size_t		i;
 
-	median = get_median(ps->slst, ps->stack_a->size);
-	split(ps, (t_bounds){ps->stack_a->min, median - 1});
-	insert_all(ps, (t_bounds){ps->stack_a->min, median - 1});
-	split(ps, (t_bounds){median, ps->stack_a->max});
-	insert_all(ps, (t_bounds){median, ps->stack_a->max});
+	get_bounds(ps, bounds, 6);
+	i = 0;
+	while (i < 6)
+	{
+		split(ps, bounds[i]);
+		insert_all(ps, bounds[i]);
+		++i;
+	}
 }

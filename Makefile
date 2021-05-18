@@ -6,7 +6,7 @@
 #    By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/03 11:30:39 by abrabant          #+#    #+#              #
-#    Updated: 2021/05/17 09:36:05 by abrabant         ###   ########.fr        #
+#    Updated: 2021/05/18 17:24:34 by abrabant         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,17 +23,18 @@ PUSH_SWAP_TARGET	= push_swap
 
 # SOURCES
 
-HEADERS				= $(addprefix include/pushswap/, stack.h core.h checker.h errcode.h debug.h parsing.h)
+HEADERS				= $(addprefix include/pushswap/, stack.h pscore.h checker.h errcode.h debug.h parsing.h)
 
-STACK			= $(addprefix src/stack/, stack_new.c stack_push.c		\
+STACK				= $(addprefix src/stack/, stack_new.c stack_push.c		\
 						stack_push_from_to.c stack_isempty.c stack_peek.c	\
 						stack_rotate_up.c stack_rotate_down.c				\
 						stack_size.c stack_lookup.c stack_issorted.c		\
 						stack_search.c stack_swap_top.c stack_destroy.c	\
 						stack_min_max.c stack_to_array.c)
 
-CORE					= $(addprefix src/core/, generate.c \
-						outcmd.c gsv.c sort3.c exit_program.c chunk_sort.c sort100.c)
+CORE				= $(addprefix src/core/, generate.c \
+						outcmd.c gsv.c sort3.c exit_program.c \
+						sort_utils.c sort_utils2.c sort100.c sort500.c bounds.c)
 
 CHECKER				= $(addprefix src/checker/, execute_instruction_set.c)
  

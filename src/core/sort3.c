@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "pushswap/cmd.h"
-#include "pushswap/core.h"
+#include "pushswap/pscore.h"
 
 void	sort3(t_pushswap *ps)
 {

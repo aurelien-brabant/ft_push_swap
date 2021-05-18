@@ -15,7 +15,7 @@
 
 #include "libft/cstring.h"
 
-#include "pushswap/core.h"
+#include "pushswap/pscore.h"
 #include "pushswap/stack.h"
 #include "pushswap/cmd.h"
 #include "pushswap/debug.h"
