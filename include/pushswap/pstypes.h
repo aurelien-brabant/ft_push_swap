@@ -35,6 +35,12 @@ typedef struct s_chunk
 	int	ub; /* upper bound */
 }	t_chunk;
 
+typedef struct s_bounds
+{
+	int lower;
+	int upper;
+}	t_bounds;
+
 typedef struct s_pushswap
 {
 	t_cmd	*cmdlist;

@@ -12,6 +12,8 @@
 
 #include <stdio.h>
 
+#include "libft/cstring.h"
+
 #include "pushswap/debug.h"
 #include "pushswap/core.h"
 #include "pushswap/stack.h"
@@ -33,22 +35,26 @@ static int	get_median(int *a, size_t size)
 	return(a[mid]);
 }
 
+static bool	is_oob(int v, t_bounds bounds)
+{
+	return (!(v >= bounds.lower && v <= bounds.upper));
+}
+
 /*
 ** Push all integers in stack A that are below the median into stack B.
+** Do not push more than stack_size / 2 + 1 on stack B to save some ra.
 */
 
-void	split(t_pushswap *ps, t_stack *stack, int lb, int ub)
+void	split(t_pushswap *ps, t_bounds bounds)
 {
 	int			i;
 	int			lim;
 
 	lim = ps->stack_a->size / 2 + 1;
-	//if (stack->size % 2 != 0)
-		//lim = stack->size / 2 + 1;
 	i = ps->stack_a->size;
 	while ((int)ps->stack_b->size < lim && i > 0)
 	{
-		if (stack_peek(stack) >= lb && stack_peek(stack) <= ub)
+		if (!is_oob(stack_peek(ps->stack_a), bounds))
 			outcmd(ps, PS_PUSH_B);
 		else
 			outcmd(ps, PS_ROT_A);
@@ -77,7 +83,19 @@ static int	select_value_by_index(t_stack *stack)
 	return (min_ind);
 }
 
-static void	move_item_to_top(t_pushswap *ps, int item_index, int lb, int ub)
+static const char	*optimize(t_pushswap *ps, const char *cmd, t_bounds bounds, int item_index)
+{
+	int	item_val;
+	int	peek_a;
+
+	item_val = gsv(ps->stack_b, item_index);
+	peek_a = stack_peek(ps->stack_a);
+	if (ft_strcmp(cmd, PS_ROT_B) == 0 && !is_oob(peek_a, bounds) && peek_a < item_val)
+		return (PS_ROT_AB);
+	return (cmd);
+}
+
+static void	move_item_to_top(t_pushswap *ps, int item_index, t_bounds bounds)
 {
 	const char	*cmd;
 	int			offset;
@@ -92,55 +110,49 @@ static void	move_item_to_top(t_pushswap *ps, int item_index, int lb, int ub)
 	else
 	{
 		offset = item_index;
-		/*
-		if (!rflag && peak_a >= lb && peak_a <= ub 
-			&& peak_a < item_val)
-		{
-			cmd = PS_ROT_AB;
-			rflag = true;	
-		}
-		else
-		*/
 		cmd = PS_ROT_B;
 	}
 	while (offset-- > 0)
-		outcmd(ps, cmd);
+		outcmd(ps, optimize(ps, cmd, bounds, item_index));
 }
 
-static void insert(t_pushswap *ps, int lb, int ub)
+static void insert(t_pushswap *ps, t_bounds bounds)
 {
 	int	peek_a;
 
 	peek_a = stack_peek(ps->stack_a);
-	//consider that only if top element on A was part of the B stack.
-	if (peek_a >= lb && peek_a <= ub && peek_a < stack_peek(ps->stack_b))
+	if (!is_oob(peek_a, bounds) && peek_a < stack_peek(ps->stack_b))
 		outcmd(ps, PS_ROT_A);
 	outcmd(ps, PS_PUSH_A);
 }
 
-static void	insert_all(t_pushswap *ps, int lb, int ub)
+static void	insert_all(t_pushswap *ps, t_bounds bounds)
 {
 	int	selected_index;
 
 	while (!stack_isempty(ps->stack_b))
 	{
 		selected_index = select_value_by_index(ps->stack_b);
-		/* move selected min/max to the top of the stack B */
-		move_item_to_top(ps, selected_index, lb, ub);
-		/* the insert it at the right place in stack A */
-		insert(ps, lb, ub);
+		move_item_to_top(ps, selected_index, bounds);
+		insert(ps, bounds);
 	}
-	while (stack_peek(ps->stack_a) >= lb && stack_peek(ps->stack_a) <= ub)
+	while (!is_oob(stack_peek(ps->stack_a), bounds))
 		outcmd(ps, PS_ROT_A);
 }
+
+/*
+** Optimized sorting for 100 items.
+** CURRRENT_STATE: in most cases sorting is done with < 900 instructions.
+** Works for any number of items, but is not super efficient.
+*/
 
 void	sort100(t_pushswap *ps)
 {
 	int	median;
 
 	median = get_median(ps->slst, ps->stack_a->size);
-	split(ps, ps->stack_a, ps->stack_a->min, median - 1);
-	insert_all(ps, ps->stack_a->min, median - 1);
-	split(ps, ps->stack_a, median, ps->stack_a->max);
-	insert_all(ps, median, ps->stack_a->max);
+	split(ps, (t_bounds){ps->stack_a->min, median - 1});
+	insert_all(ps, (t_bounds){ps->stack_a->min, median - 1});
+	split(ps, (t_bounds){median, ps->stack_a->max});
+	insert_all(ps, (t_bounds){median, ps->stack_a->max});
 }
