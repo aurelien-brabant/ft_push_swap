@@ -6,7 +6,7 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 15:23:23 by abrabant          #+#    #+#             */
-/*   Updated: 2021/04/04 05:42:00 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/05/18 23:13:23 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ void	sort3(t_pushswap *ps)
 	int	nb1;
 	int	nb2;
 
-	nb0 = gsv(ps->stack_a, 0);
+	nb0 = gsv(ps->stack_a, 2);
 	nb1 = gsv(ps->stack_a, 1);
-	nb2 = gsv(ps->stack_a, 2);
+	nb2 = gsv(ps->stack_a, 0);
 	if (nb2 > nb0 && nb0 > nb1)
 		outcmd(ps, "ra");
 	else if (nb2 > nb1 && nb1 > nb0)

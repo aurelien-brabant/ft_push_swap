@@ -4,13 +4,11 @@
 #include "pushswap/stack.h"
 #include "pushswap/cmd.h"
 
-void	split(t_pushswap *ps, t_bounds bounds)
+void	split(t_pushswap *ps, t_bounds bounds, int lim)
 {
 	int			i;
-	int			lim;
 	int			selected_b;
 
-	lim = ps->stack_a->size / 2 + 1;
 	i = ps->stack_a->size;
 	while ((int)ps->stack_b->size < lim && i > 0)
 	{

@@ -6,7 +6,7 @@
 /*   By: abrabant <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/17 09:16:25 by abrabant          #+#    #+#             */
-/*   Updated: 2021/05/18 14:52:32 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/05/18 21:04:27 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,4 @@ static int	get_median(int *a, size_t size)
 void	sort100(t_pushswap *ps)
 {
 	int	median;
-
-	median = get_median(ps->slst, ps->stack_a->size);
-	split(ps, (t_bounds){ps->stack_a->min, median - 1});
-	insert_all(ps, (t_bounds){ps->stack_a->min, median - 1});
-	split(ps, (t_bounds){median, ps->stack_a->max});
-	insert_all(ps, (t_bounds){median, ps->stack_a->max});
 }

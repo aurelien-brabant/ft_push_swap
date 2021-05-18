@@ -6,7 +6,7 @@
 #    By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/03 11:30:39 by abrabant          #+#    #+#              #
-#    Updated: 2021/05/18 17:24:34 by abrabant         ###   ########.fr        #
+#    Updated: 2021/05/19 00:26:44 by abrabant         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,8 +33,10 @@ STACK				= $(addprefix src/stack/, stack_new.c stack_push.c		\
 						stack_min_max.c stack_to_array.c)
 
 CORE				= $(addprefix src/core/, generate.c \
-						outcmd.c gsv.c sort3.c exit_program.c \
-						sort_utils.c sort_utils2.c sort100.c sort500.c bounds.c)
+						outcmd.c gsv.c exit_program.c \
+						sort_utils.c sort_utils2.c				\
+						sort2.c sort3.c sort4.c sort5.c sort.c	\
+						bounds.c)
 
 CHECKER				= $(addprefix src/checker/, execute_instruction_set.c)
  

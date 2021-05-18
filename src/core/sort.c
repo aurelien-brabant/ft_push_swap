@@ -1,40 +1,55 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort500.c                                          :+:      :+:    :+:   */
+/*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abrabant <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/17 09:16:25 by abrabant          #+#    #+#             */
-/*   Updated: 2021/05/18 17:18:32 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/05/19 00:25:56 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <stdlib.h>
 
 #include "libft/cstring.h"
 
-#include "pushswap/debug.h"
 #include "pushswap/pscore.h"
+#include "pushswap/pstypes.h"
 #include "pushswap/stack.h"
 #include "pushswap/cmd.h"
 
 /*
-** Optimized sorting for 500 items.
-** CURRRENT_STATE: in most cases sorting is done with < 900 instructions.
-** Works for any number of items, but is not super efficient.
+** Global sorting function, always used when stack size is greater than five.
+** Split is optimized to work the best possible with a stack size of 100 and
+** 500 though.
 */
 
-void	sort500(t_pushswap *ps)
+static size_t get_bound_nb(t_stack *a)
 {
-	t_bounds	bounds[6];
+	if (a->size == 500)
+		return(SORT500_SPLIT_NB);
+	if (a->size == 100)
+		return (SORT100_SPLIT_NB);
+	else
+		return (2);
+}
+
+void	sort(t_pushswap *ps)
+{
+	t_bounds	*bounds;
+	size_t		bounds_nb;
 	size_t		i;
 
-	get_bounds(ps, bounds, 6);
+	bounds_nb = get_bound_nb(ps->stack_a);
+	bounds = ft_gc_add(ps->gc, malloc(sizeof(*bounds) * bounds_nb), &free);
+	if (bounds == NULL)
+		return ;
+	get_bounds(ps, bounds, bounds_nb);
 	i = 0;
-	while (i < 6)
+	while (i < bounds_nb)
 	{
-		split(ps, bounds[i]);
+		split(ps, bounds[i], ps->stack_a->size / bounds_nb + 1);
 		insert_all(ps, bounds[i]);
 		++i;
 	}
