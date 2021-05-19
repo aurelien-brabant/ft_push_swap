@@ -6,7 +6,7 @@
 /*   By: abrabant <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/17 09:16:25 by abrabant          #+#    #+#             */
-/*   Updated: 2021/05/19 00:25:56 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/05/19 12:19:46 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@
 ** 500 though.
 */
 
-static size_t get_bound_nb(t_stack *a)
+static size_t	get_bound_nb(t_stack *a)
 {
 	if (a->size == 500)
-		return(SORT500_SPLIT_NB);
+		return (SORT500_SPLIT_NB);
 	if (a->size == 100)
 		return (SORT100_SPLIT_NB);
 	else

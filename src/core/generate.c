@@ -6,7 +6,7 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 13:01:12 by abrabant          #+#    #+#             */
-/*   Updated: 2021/05/19 00:26:21 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/05/19 12:19:56 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	generate(t_pushswap *ps)
 		return ;
 	if (stack_issorted(ps->stack_a))
 		return ;
-	if (ps->stack_a->size == 2) 
+	if (ps->stack_a->size == 2)
 		sort2(ps);
 	else if (ps->stack_a->size == 3)
 		sort3(ps);
