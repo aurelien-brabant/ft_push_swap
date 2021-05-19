@@ -6,15 +6,14 @@
 #    By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/03 11:30:39 by abrabant          #+#    #+#              #
-#    Updated: 2021/05/19 00:26:44 by abrabant         ###   ########.fr        #
+#    Updated: 2021/05/19 23:18:54 by abrabant         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # PROJECT CONFIG
 
 CC					= clang
-# -Wall -Wextra -Werror -Wpedantic
-CFLAGS				= -g  -Iinclude -Ilibft/include
+CFLAGS				= -g  -Iinclude -Ilibft/include -Wall -Wextra -Werror -Wpedantic
 LD					= clang
 LD_FLAGS			= -g -Llibft -lft
 
