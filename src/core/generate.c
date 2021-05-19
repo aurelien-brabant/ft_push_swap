@@ -6,7 +6,7 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 13:01:12 by abrabant          #+#    #+#             */
-/*   Updated: 2021/05/19 20:11:24 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/05/19 22:17:40 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	generate(t_pushswap *ps)
 {
 	ps->cmdlist = cmd_getlist();
 	ps->stack_b = ft_gc_add(ps->gc, stack_new(), stack_destroy);
-	ps->stack_b = stack_new();
+	ps->stack_b = ft_gc_add(ps->gc, stack_new(), stack_destroy);
 	if (ps->stack_b == NULL)
 		return ;
 	if (stack_issorted(ps->stack_a))
