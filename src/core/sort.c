@@ -6,7 +6,7 @@
 /*   By: abrabant <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/17 09:16:25 by abrabant          #+#    #+#             */
-/*   Updated: 2021/05/19 12:19:46 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/05/19 20:18:25 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,14 @@
 /*
 ** Global sorting function, always used when stack size is greater than five.
 ** Split is optimized to work the best possible with a stack size of 100 and
-** 500 though.
+** 500.
 */
 
 static size_t	get_bound_nb(t_stack *a)
 {
-	if (a->size == 500)
+	if (a->size >= 500)
 		return (SORT500_SPLIT_NB);
-	if (a->size == 100)
+	if (a->size >= 100)
 		return (SORT100_SPLIT_NB);
 	else
 		return (2);
@@ -49,7 +49,7 @@ void	sort(t_pushswap *ps)
 	i = 0;
 	while (i < bounds_nb)
 	{
-		split(ps, bounds[i], ps->stack_a->size / bounds_nb + 1);
+		split(ps, bounds[i]);
 		insert_all(ps, bounds[i]);
 		++i;
 	}

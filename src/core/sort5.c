@@ -5,7 +5,8 @@
 /*
 ** Main function has been divided to make this code norm compliant.
 ** This function handles the most complicated insertion scenarios, that
-** both require 4 commands.
+** both require 4 commands. If one of these two scenarios is selected, then
+** the main function (sort5) will stop and not go further this call.
 */
 
 static bool	handle_complicated_insertion(t_pushswap *ps, int peek_b)

@@ -6,7 +6,7 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 13:01:12 by abrabant          #+#    #+#             */
-/*   Updated: 2021/05/19 12:19:56 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/05/19 20:11:24 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	generate(t_pushswap *ps)
 		sort5(ps);
 	else
 	{
-		ps->slst = stack_to_array(ps->stack_a);
+		ps->slst = ft_gc_add(ps->gc, stack_to_array(ps->stack_a), &free);
 		ft_quick_sort(ps->slst, ps->stack_a->size, sizeof (int), &ft_gcmp_int);
 		sort(ps);
 	}

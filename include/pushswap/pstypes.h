@@ -27,8 +27,10 @@ typedef struct s_cmd
 
 typedef struct s_bounds
 {
-	int	lower;
-	int	upper;
+	int		lower;
+	int		upper;
+	size_t	size;
+	size_t	nb;
 }	t_bounds;
 
 typedef struct s_pushswap

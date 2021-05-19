@@ -1,10 +1,22 @@
 #include "pushswap/pscore.h"
 #include "pushswap/stack.h"
 
+/*
+** is Out Of Bounds
+*/
+
 bool	is_oob(int v, t_bounds bounds)
 {
 	return (!(v >= bounds.lower && v <= bounds.upper));
 }
+
+/*
+** This function is used on stack B only, in order to get the index of the best
+** value to rotate to the top of the stack.
+**
+** Two values are looked up: the minimum and the maximum, because they can be
+** easily inserted at the correct position on the main stack.
+*/
 
 int	select_value_by_index(t_stack *stack)
 {
