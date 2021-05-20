@@ -1,8 +1,0 @@
-.obj
-libft.a
-.cache
-a.out
-main.c
-*.o
-test/suite/*.o
-test/test.out
