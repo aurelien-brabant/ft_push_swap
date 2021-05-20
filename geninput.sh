@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if [ $# -ne 1 ]; then
 	printf "Usage: ./geninput.sh <nb>\n"
