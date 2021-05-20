@@ -6,7 +6,7 @@
 #    By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/03 11:30:39 by abrabant          #+#    #+#              #
-#    Updated: 2021/05/20 12:43:22 by abrabant         ###   ########.fr        #
+#    Updated: 2021/05/20 22:32:54 by abrabant         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,11 +54,14 @@ OBJS				= $(SRCS:%.c=%.o)
 
 all: $(CHECKER_TARGET) $(PUSH_SWAP_TARGET)
 
-$(CHECKER_TARGET): libft/libft.a $(HEADERS) $(OBJS) src/checker/main.o
+libft:
+	git clone https://github.com/aurelien-brabant/libft
+
+$(CHECKER_TARGET): libft libft/libft.a $(HEADERS) $(OBJS) src/checker/main.o
 	@$(LD) -o $(CHECKER_TARGET) $(OBJS) src/checker/main.o $(LD_FLAGS)
 	@printf "[\033[1;36mPUSH-SWAP\033[0;m] Generated \033[1;32m$(CHECKER_TARGET)\033[0m\n"
 
-$(PUSH_SWAP_TARGET): libft/libft.a $(HEADERS) $(OBJS) src/core/main.o
+$(PUSH_SWAP_TARGET): libft libft/libft.a $(HEADERS) $(OBJS) src/core/main.o
 	@$(LD) -o $(PUSH_SWAP_TARGET) $(OBJS) src/core/main.o $(LD_FLAGS)
 	@printf "[\033[1;36mPUSH-SWAP\033[0;m] Generated \033[1;32m$(PUSH_SWAP_TARGET)\033[0m\n"
 
