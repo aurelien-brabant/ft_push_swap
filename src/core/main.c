@@ -6,7 +6,7 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/28 23:14:10 by abrabant          #+#    #+#             */
-/*   Updated: 2021/05/19 14:51:17 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/05/20 11:26:19 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,11 @@ static int	print_instruction(void *instruction)
 	return (0);
 }
 
+static void	destroy_cmdset(t_array *a)
+{
+	ft_array_destroy(a, NULL);
+}
+
 int	main(int ac, char **av)
 {
 	t_pushswap	ps;
@@ -34,7 +39,7 @@ int	main(int ac, char **av)
 	ps.gc = ft_gc_new();
 	if (ps.gc == NULL)
 		return (ERRCODE_BADALLOC);
-	ps.cmdset = ft_gc_add(ps.gc, ft_array_new(50), ft_array_destroy);
+	ps.cmdset = ft_gc_add(ps.gc, ft_array_new(50), &destroy_cmdset);
 	if (ps.cmdset == NULL)
 		exit_program(ps.gc, ERRCODE_BADALLOC);
 	ps.stack_a = parse_cli(ac, av, ps.gc);

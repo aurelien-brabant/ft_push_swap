@@ -6,7 +6,7 @@
 /*   By: abrabant <abrabant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/28 12:44:33 by abrabant          #+#    #+#             */
-/*   Updated: 2021/03/29 19:44:02 by abrabant         ###   ########.fr       */
+/*   Updated: 2021/05/20 11:25:01 by abrabant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,12 @@
 
 t_cmd	*cmd_getlist(void)
 {
-	static t_cmd	list[CMD_NB] = {{"pa", cmd_push_a}, {"pb", cmd_push_b},
-		{"ra", cmd_rotate_up_a}, {"rb", cmd_rotate_up_b},
-		{"rr", cmd_rotate_up_double}, {"rra", cmd_rotate_down_a},
-		{"rrb", cmd_rotate_down_b}, {"rrr", cmd_rotate_down_double},
-		{"sa", cmd_swap_a}, {"sb", cmd_swap_b}, {"ss", cmd_swap_double}
+	static t_cmd	list[CMD_NB] = {{PS_PUSH_A, cmd_push_a},
+		{PS_PUSH_B, cmd_push_b}, {PS_ROT_A, cmd_rotate_up_a},
+		{PS_ROT_B, cmd_rotate_up_b}, {PS_ROT_AB, cmd_rotate_up_double},
+		{PS_REV_ROT_A, cmd_rotate_down_a}, {PS_REV_ROT_B, cmd_rotate_down_b},
+		{PS_REV_ROT_AB, cmd_rotate_down_double}, {PS_SWAP_A, cmd_swap_a},
+		{PS_SWAP_B, cmd_swap_b}, {PS_SWAP_AB, cmd_swap_double}
 	};
 
 	return (list);
